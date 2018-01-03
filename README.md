@@ -30,7 +30,7 @@ If your version of MATLAB does not have the Add-Ons Explorer, download the zip f
  
 ### Installing software
 
-* Download the PicoVNA 2 software [Downloads page](https://www.picotech.com/downloads).
+* Download the PicoVNA 2 software from our [Downloads page](https://www.picotech.com/downloads).
 
 ## Obtaining support
 
