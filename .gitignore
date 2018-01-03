@@ -1,4 +1,8 @@
 # .gitignore file for picosdk-matlab-picovna-vector-network-analyzer-toolbox
 # Untracked files/folders to ignore.
 
+# Calibration files
+**/*.cal
 
+# Touchstone files
+**/*.s2p
