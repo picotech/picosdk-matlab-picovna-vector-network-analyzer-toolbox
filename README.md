@@ -1,6 +1,6 @@
 # PicoVNA Vector Network Analyzer Toolbox
 
-The PicoVNA Vector Network Analyzer Toolbox provides a set of functions and examples for use with Pico Technology PicoVNA Vector Network Analyzer products directly from MATLAB. 
+The PicoVNA Vector Network Analyzer Toolbox provides a set of functions and examples for use with Pico Technology PicoVNA<sup>TM</sup> Vector Network Analyzer products directly from MATLAB. 
 This toolbox contains Help documentation that can be accessed via the Documentation page in the MATLAB Help menu.
 
 Users downloading the zip file will need to add the root folder and sub-folders to the MATLAB path.
