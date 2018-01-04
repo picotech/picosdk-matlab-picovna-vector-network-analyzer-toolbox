@@ -1,5 +1,8 @@
-function disconnectVNA(obj)
+%% DisconnectVNA
+%
+%% Desciption
 % DISCONNECTVNA Closes the connection to the PicoVNA device.
+%
 %   disconnectVNA(obj) closes the connection to the VNA and deletes the COM
 %   Object from the workspace:
 %
@@ -9,6 +12,7 @@ function disconnectVNA(obj)
 %
 % See also CONNECTVNA.
 
+function disconnectVNA(obj)
     % Close connection to PicoVNA.
     obj.CloseVNA();
 

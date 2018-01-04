@@ -12,7 +12,7 @@
 % addpath' in the MATLAB Command Window
 %
 % Additionally you must have the .cal file for your device and the
-% GoldenDUT.m file in the current folder.
+% GoldenDUT.mat file in the current folder.
 %
 % *Example:*
 %   PicoVNA_DUT_PassFail_Testing_Example;

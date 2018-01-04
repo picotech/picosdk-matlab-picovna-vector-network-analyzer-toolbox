@@ -1,16 +1,20 @@
-function [f, h] = stopButton(x, y, w, h)
-% STOPBUTTONVNA Displays a stop button.
+%% StopButtonVNA
+%
+%% Description
+%
+% STOPBUTTONVNA  Displays a stop button.
+%
 %   [F, H] = STOPBUTTON(X, Y, H, W) displays a Stop button to check abort of data collection - 
 %   based on MathWorks solution 1-15JIQ (http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine) and MATLAB Central Forum.
 %   
-% *Input arguments:*
+%% Input arguments:
 %
 %   X - See left in Location and Size for FIGURE
 %   Y - See bottom in Location and Size for FIGURE
 %   W - See width in Location and Size for FIGURE
 %   H - See height in Location and Size for FIGURE
 %
-% *Output arguments:*
+%% Output arguments:
 %
 %   F - the handle to the button's figure 
 %   H - the uicontrol object.
@@ -19,6 +23,7 @@ function [f, h] = stopButton(x, y, w, h)
 %
 %   See also FIGURE, UICONTROL.
 
+function [f, h] = stopButton(x, y, w, h)
     f = figure('Name', 'PicoVNA','numbertitle','off', 'menubar', 'none',...
               'units', 'pix',...
               'pos', [x y w h]);
