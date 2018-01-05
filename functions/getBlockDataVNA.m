@@ -22,6 +22,12 @@
 % Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
 
 function [frequency, data] = getBlockDataVNA(obj, Spara, datatype)
+    % Check for valid inputs
+    validateattributes(obj,{'COM.PicoControl2_PicoVNA__2'},{});
+    validstr1 = validatestring(Spara,{'S11', 'S12', 'S21', 'S22'});
+    validstr2 = validatestring(datatype,{'real', 'imag', 'logmag', 'phase', 'swr', 'gd', 'td'});
+    
+
     % Get data from VNA.
     rawdata = obj.GetData(Spara,datatype,0);
     

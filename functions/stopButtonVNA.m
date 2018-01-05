@@ -24,6 +24,12 @@
 %   See also FIGURE, UICONTROL.
 
 function [f, h] = stopButton(x, y, w, h)
+    % Check for valid inputs
+    validateattributes(x,{'numeric'},{'nonnegative'});
+    validateattributes(y,{'numeric'},{'nonnegative'});
+    validateattributes(w,{'numeric'},{'positive'});
+    validateattributes(h,{'numeric'},{'positive'});
+
     f = figure('Name', 'PicoVNA','numbertitle','off', 'menubar', 'none',...
               'units', 'pix',...
               'pos', [x y w h]);

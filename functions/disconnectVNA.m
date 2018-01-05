@@ -13,6 +13,9 @@
 % See also CONNECTVNA.
 
 function disconnectVNA(obj)
+    %Check inputs are valid
+    validateattributes(obj,{'COM.PicoControl2_PicoVNA__2'},{});
+    
     % Close connection to PicoVNA.
     obj.CloseVNA();
 
