@@ -2,7 +2,7 @@
 %
 % This is an example of a Pass/Fail test using the PicoVNA. This compares a
 % S21 log magnitude sweep from a device to the same measurement of a
-% prevously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.
+% previously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.
 %
 % To run this example session, type the name of the file,
 % PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.
@@ -51,7 +51,7 @@ load('GoldenDUT.mat');
 
 %% Create pass band
 % Create a pass band using the Golden DUT data and the tolererance in dB of
-% the testing for comparision with the DUTs later.
+% the testing for comparison with the DUTs later.
 
 tolerance = 0.2; % Tolerance of the cable in dB
 

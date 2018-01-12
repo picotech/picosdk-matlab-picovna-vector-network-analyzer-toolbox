@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Troubleshooting</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-04"><meta name="DC.source" content="Troubleshooting.m"><style type="text/css">
+      --><title>Troubleshooting</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-12"><meta name="DC.source" content="picovna_tbx_troubleshooting.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Troubleshooting</h1><!--introduction--><p>This section covers some troubleshooting information for common errors that may be encountered</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Unable to connect to a device</a></li><li><a href="#2">Attempt to connect to a device results in a lockup</a></li><li><a href="#3">General</a></li></ul></div><h2 id="1">Unable to connect to a device</h2><div><ul><li>Check that the device is connected to the PC and listed in the Windows Device Manager.</li><li>Confirm that the LED on the front of the device is illuminated.</li><li>Ensure that no other instance of a device object correspoinding to a previous connection is present - if so, delete it.</li></ul></div><h2 id="2">Attempt to connect to a device results in a lockup</h2><p>This can occur if a session has been previously terminated using Ctrl-C and the disconnectVNA function has not been called.</p><div><ul><li>Diconnect the USB cable from the PicoVNA and close MATLAB</li><li>Reconnect the USB lead</li></ul></div><h2 id="3">General</h2><p><b>NOTE:</b> Always call the disconnectVNA function on the device object on completion of data aquisition.</p><p>To obtain Technical Support please refer to the Support page</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Troubleshooting</h1><!--introduction--><p>This section covers some troubleshooting information for common errors that may be encountered</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Unable to connect to a device</a></li><li><a href="#2">Attempt to connect to a device results in a lockup</a></li><li><a href="#3">General</a></li></ul></div><h2 id="1">Unable to connect to a device</h2><div><ul><li>Check that the device is connected to the PC and listed in the Windows Device Manager.</li><li>Confirm that the LED on the front of the device is illuminated.</li><li>Ensure that no other instance of a device object corresponding to a previous connection is present - if so, delete it.</li></ul></div><h2 id="2">Attempt to connect to a device results in a lockup</h2><p>This can occur if a session has been previously terminated using Ctrl-C and the disconnectVNA function has not been called.</p><div><ul><li>Diconnect the USB cable from the PicoVNA and close MATLAB</li><li>Reconnect the USB lead</li></ul></div><h2 id="3">General</h2><p><b>NOTE:</b> Always call the disconnectVNA function on the device object on completion of data aquisition.</p><p>To obtain Technical Support please refer to the Support page</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Troubleshooting
 %
@@ -79,7 +79,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * Check that the device is connected to the PC and listed in the Windows
 % Device Manager.
 % * Confirm that the LED on the front of the device is illuminated.
-% * Ensure that no other instance of a device object correspoinding to a
+% * Ensure that no other instance of a device object corresponding to a
 % previous connection is present - if so, delete it.
 % 
 %% Attempt to connect to a device results in a lockup

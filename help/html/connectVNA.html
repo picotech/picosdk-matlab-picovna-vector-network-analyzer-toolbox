@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>ConnectVNA</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-04"><meta name="DC.source" content="connectVNA.m"><style type="text/css">
+      --><title>ConnectVNA</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-12"><meta name="DC.source" content="connectVNA.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,8 +66,8 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>ConnectVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2 id="1">Description</h2><p>CONNECTVNA Creates PicoVNA COM object.</p><pre class="language-matlab">connectVNA() returns <span class="string">a</span> <span class="string">COM</span> <span class="string">object</span> <span class="string">to</span> <span class="string">a</span> <span class="string">PicoVNA</span> <span class="string">device.</span>
-</pre><p>Copyright: &copy; 2017-2018 Pico Technology Ltd. All rights reserved.</p><p>See also DISCONNECTVNA.</p><pre class="codeinput"><span class="keyword">function</span> [obj] = connectVNA()
+  </style></head><body><div class="content"><h1>ConnectVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2 id="1">Description</h2><p>connectVNA Creates PicoVNA COM object.</p><pre class="language-matlab">connectVNA() returns <span class="string">a</span> <span class="string">COM</span> <span class="string">object</span> <span class="string">to</span> <span class="string">a</span> <span class="string">PicoVNA</span> <span class="string">device.</span>
+</pre><p>Copyright: &copy; 2017-2018 Pico Technology Ltd. All rights reserved.</p><p>See also disconnectVNA.</p><pre class="codeinput"><span class="keyword">function</span> [obj] = connectVNA()
     <span class="comment">% Create VNA COM object.</span>
     obj = actxserver(<span class="string">'PicoControl2.PicoVNA_2'</span>);
 
@@ -75,22 +75,22 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
     findPicoVNA = obj.FND;
 
     <span class="keyword">if</span> (findPicoVNA==0)
-        error(<span class="string">'ConnectVNA:VNANotFound'</span>, <span class="string">'No PicoVNA device found.'</span>);
+        error(<span class="string">'connectVNA:VNANotFound'</span>, <span class="string">'No PicoVNA device found.'</span>);
     <span class="keyword">end</span>
 
 <span class="keyword">end</span>
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% ConnectVNA
 %
 %% Description
-% CONNECTVNA Creates PicoVNA COM object.
+% connectVNA Creates PicoVNA COM object.
 %
 %   connectVNA() returns a COM object to a PicoVNA device.
 %
 % Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
 %
-% See also DISCONNECTVNA.
+% See also disconnectVNA.
 
 function [obj] = connectVNA()
     % Create VNA COM object.
@@ -100,7 +100,7 @@ function [obj] = connectVNA()
     findPicoVNA = obj.FND;
     
     if (findPicoVNA==0)
-        error('ConnectVNA:VNANotFound', 'No PicoVNA device found.');
+        error('connectVNA:VNANotFound', 'No PicoVNA device found.');
     end
 
 end
