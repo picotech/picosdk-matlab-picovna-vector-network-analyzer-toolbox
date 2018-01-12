@@ -2,9 +2,9 @@
 %
 %% Description
 %
-% STOPBUTTONVNA  Displays a stop button.
+% StopButtonVNA  Displays a stop button.
 %
-%   [F, H] = STOPBUTTON(X, Y, H, W) displays a Stop button to check abort of data collection - 
+%   [F, H] = StopButton(X, Y, H, W) displays a Stop button to check abort of data collection - 
 %   based on MathWorks solution 1-15JIQ (http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine) and MATLAB Central Forum.
 %   
 %% Input arguments:

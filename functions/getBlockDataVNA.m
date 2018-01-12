@@ -1,7 +1,7 @@
 %% GetBlockDataVNA
 %
 %% Description
-% GETBLOCKDATAVNA Returns frequency and data points.
+% getBlockDataVNA Returns frequency and data points.
 %
 %   getBlockDataVNA(obj, Spara, datatype) returns frequency and data points
 %   from a measurement sweep performed by a PicoVNA on a DUT.

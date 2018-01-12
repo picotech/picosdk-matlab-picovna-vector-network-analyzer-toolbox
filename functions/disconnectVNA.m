@@ -1,7 +1,7 @@
 %% DisconnectVNA
 %
 %% Desciption
-% DISCONNECTVNA Closes the connection to the PicoVNA device.
+% disconnectVNA Closes the connection to the PicoVNA device.
 %
 %   disconnectVNA(obj) closes the connection to the VNA and deletes the COM
 %   Object from the workspace:
@@ -10,7 +10,7 @@
 %
 % Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
 %
-% See also CONNECTVNA.
+% See also connectVNA.
 
 function disconnectVNA(obj)
     %Check inputs are valid
