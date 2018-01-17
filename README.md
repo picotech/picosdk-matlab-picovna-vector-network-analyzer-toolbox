@@ -48,7 +48,7 @@ Please refer to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
 
 See [LICENSE.md](LICENSE.md) for license terms. 
 
-*PicoVNA* is a registered trademark of Pico Technology Ltd. 
+*PicoVNA* is a trademark of Pico Technology Ltd. 
 
 *MATLAB* is a registered trademark of The Mathworks, Inc.
 
