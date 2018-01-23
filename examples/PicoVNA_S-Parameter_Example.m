@@ -1,13 +1,13 @@
-%% PicoVNA Rapid Block Example
+%% PicoVNA S-Parameter Example
 %
 % This is an example of setting up the connection with the Pico Technology
 % PicoVNA 106, loading calibration data, making measurements and collecting
 % the log magnitude data for S11, S12, S21 and S22.
 %
 % To run this example session, type the name of the file,
-% PicoVNA_Rapid_Block_Example, in the MATLAB Command Window.
+% PicoVNA_S-Parameter_Example, in the MATLAB Command Window.
 %
-% The file, PicoVNA_Rapid_Block_Example.m must be on your MATLAB Path. For
+% The file, PicoVNA_S-Parameter_Example.m must be on your MATLAB Path. For
 % additional information on setting your MATLAB path, type 'help addpath' in
 % the MATLAB Command Window
 %
@@ -15,12 +15,13 @@
 % folder.
 %
 % *Example:*
-%   PicoVNA_Rapid_Block_Example;
+%   PicoVNA_S-Parameter_Example;
 %
 % *Description:*
 % Demonstrates how to connect to the VNA, load in a calibration, make
-% measurements and collect data for S11, S12, S21 and S22.  The measurement
-% and data collection is looped until the user stops the process.
+% measurements and collect data for S11, S12, S21 and S22.  The
+% S-aparamters are plotted onto auto-scaled plots.  The measurement and
+% data collection is looped until the user stops the process.
 %
 % *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
 
