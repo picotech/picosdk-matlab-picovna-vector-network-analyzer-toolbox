@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding="utf-8"?>
 <toc version="2.0">
-    <tocitem target="pcovna_tbx_gettingstarted.html"> Getting Started withPicoVNA 106 Vector Network Analyser
+    <tocitem target="picovna_tbx_gettingstarted.html"> Getting Started withPicoVNA 106 Vector Network Analyzer
         <tocitem target="picovna_tbx_support.html">Support</tocitem>
         <tocitem target="picovna_tbx_troubleshooting.html">Troubleshooting</tocitem>
         <tocitem target="picovna_tbx_releasenotes.html">Release Notes</tocitem>

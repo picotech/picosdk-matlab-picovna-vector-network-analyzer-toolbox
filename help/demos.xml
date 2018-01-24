@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <demos>
-    <name>PicoVNA 106 Vector Network Analyser Toolbox</name>
+    <name>PicoVNA 106 Vector Network Analyzer Toolbox</name>
     <type>toolbox</type>
     <icon>HelpIcon.DEMOS</icon>
     <description>This toolbox contains a number of examples demonstrating how to call Instrument Driver functions to collect data and also a basic DUT pass/fail test.</description>
     <website></website>
     
     <demosection>
-        <label>PcioVNA 106</label>
+        <label>PicoVNA 106</label>
         <demoitem>
             <label>PicoVNA 106 S-Parameter Example</label>
             <type>M-file</type>

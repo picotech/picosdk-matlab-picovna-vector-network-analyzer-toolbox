@@ -1,6 +1,6 @@
 %% DisconnectVNA
 %
-%% Desciption
+%% Description
 % disconnectVNA Closes the connection to the PicoVNA device.
 %
 %   disconnectVNA(obj) closes the connection to the VNA and deletes the COM

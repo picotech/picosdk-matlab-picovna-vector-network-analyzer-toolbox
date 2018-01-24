@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Pico VNA Golden DUT Data Collection Example</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-12"><meta name="DC.source" content="PicoVNA_GoldenDUT_Example.m"><style type="text/css">
+      --><title>Pico VNA Golden DUT Data Collection Example</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-24"><meta name="DC.source" content="PicoVNA_GoldenDUT_Example.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,20 +66,18 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Pico VNA Golden DUT Data Collection Example</h1><!--introduction--><p>This is an example of Golden DUT data aquisition using the PicoVNA.  This makes a measurement of the Golden DUT and retrieves the S21 log magnitude data from the VNA ready for use in the PicoVNA_DUT_PassFail_Testing_Example.</p><p>To run this example session, type the name of the file, PicoVNA_GoldenDUT_Example, in the MATLAB Command Window.</p><p>The file, PicoVNA_GoldenDUT_Example.m must be on your MATLAB Path. For additional information on setting your MATLAB path, type 'help addpath' in the MATLAB Command Window</p><p>Additionally you must have the .cal file for your device in the current folder.</p><p><b>Example:</b>   PicoVNA_GoldenDUT_Example;</p><p><b>Description:</b>   Demonstrates how to use the VNA to collect and save data for a Golden   DUT for use in the PicoVNA_DUT_PassFail_Example.m script.</p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. See LICENSE file for terms.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clear workspace, command window and close figures</a></li><li><a href="#2">Connect to VNA</a></li><li><a href="#3">Load calibration</a></li><li><a href="#4">Measure Golden DUT</a></li><li><a href="#5">Save Golden DUT Data</a></li><li><a href="#6">Disconnect VNA</a></li></ul></div><h2 id="1">Clear workspace, command window and close figures</h2><pre class="codeinput">clear;
+  </style></head><body><div class="content"><h1>Pico VNA Golden DUT Data Collection Example</h1><!--introduction--><p>This is an example of Golden DUT data aquisition using the PicoVNA.  This makes a measurement of the Golden DUT and retrieves the S21 log magnitude data from the VNA ready for use in the PicoVNA_DUT_PassFail_Testing_Example.</p><p>To run this example session, type the name of the file, PicoVNA_GoldenDUT_Example, in the MATLAB Command Window.</p><p>The file, PicoVNA_GoldenDUT_Example.m must be on your MATLAB Path. For additional information on setting your MATLAB path, type 'help addpath' in the MATLAB Command Window</p><p>Additionally you must have the .cal file for your device in the current folder.</p><p><b>Example:</b>   PicoVNA_GoldenDUT_Example;</p><p><b>Description:</b>   Demonstrates how to use the VNA to collect and save data for a Golden   DUT for use in the PicoVNA_DUT_PassFail_Example.m script.</p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. See LICENSE file for terms.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clear workspace, command window and close figures</a></li><li><a href="#2">Connect to VNA</a></li><li><a href="#3">Load calibration</a></li><li><a href="#4">Measure Golden DUT</a></li><li><a href="#5">Save Golden DUT Data</a></li><li><a href="#6">Disconnect VNA</a></li></ul></div><h2>Clear workspace, command window and close figures<a name="1"></a></h2><pre class="codeinput">clear;
 clc;
 close <span class="string">all</span>;
-</pre><h2 id="2">Connect to VNA</h2><pre class="codeinput">picoVNACOMObj = connectVNA;
-</pre><h2 id="3">Load calibration</h2><p>Load a calibration and settings file. This needs to be generated and saved using the PicoVNA2 software.</p><pre class="codeinput"><span class="comment">% Replace DefCal.cal with the correct calibration for your device, 'Pico TD</span>
-<span class="comment">% demo with limits [Serial#].cal'.</span>
-picoVNACOMObj.LoadCal(<span class="string">'DefCal.cal'</span>);
-</pre><h2 id="4">Measure Golden DUT</h2><p>Make measurement of the Golden DUT and retrieve the log magnitude data for the S21 parameter.</p><pre class="codeinput">picoVNACOMObj.Measure(<span class="string">'ALL'</span>);
+</pre><h2>Connect to VNA<a name="2"></a></h2><pre class="codeinput">picoVNACOMObj = connectVNA;
+</pre><h2>Load calibration<a name="3"></a></h2><p>Load a calibration and settings file. This needs to be generated and saved using the PicoVNA 2 software.</p><p>Replace DefCal.cal with the correct calibration for your device, 'Pico TD demo with limits [Serial#].cal'.</p><pre class="codeinput">picoVNACOMObj.LoadCal(<span class="string">'DefCal.cal'</span>);
+</pre><h2>Measure Golden DUT<a name="4"></a></h2><p>Make measurement of the Golden DUT and retrieve the log magnitude data for the S21 parameter.</p><pre class="codeinput">picoVNACOMObj.Measure(<span class="string">'ALL'</span>);
 [Golden.Frequency, Golden.S12LogMag] = getBlockDataVNA(picoVNACOMObj,<span class="string">'S21'</span>,<span class="string">'logmag'</span>);
-</pre><h2 id="5">Save Golden DUT Data</h2><p>Save the Golden DUT data read for use in the Pass/Fail Testing Example.</p><pre class="codeinput">save (<span class="string">'GoldenDUT.mat'</span>, <span class="string">'Golden'</span>);
-</pre><h2 id="6">Disconnect VNA</h2><pre class="codeinput">disconnectVNA(picoVNACOMObj);
+</pre><h2>Save Golden DUT Data<a name="5"></a></h2><p>Save the Golden DUT data read for use in the Pass/Fail Testing Example.</p><pre class="codeinput">save (<span class="string">'GoldenDUT.mat'</span>, <span class="string">'Golden'</span>);
+</pre><h2>Disconnect VNA<a name="6"></a></h2><pre class="codeinput">disconnectVNA(picoVNACOMObj);
 
 disp(<span class="string">'Complete'</span>);
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Pico VNA Golden DUT Data Collection Example
 %
@@ -119,8 +117,8 @@ picoVNACOMObj = connectVNA;
 
 %% Load calibration
 % Load a calibration and settings file.
-% This needs to be generated and saved using the PicoVNA2 software.
-
+% This needs to be generated and saved using the PicoVNA 2 software.
+%
 % Replace DefCal.cal with the correct calibration for your device, 'Pico TD
 % demo with limits [Serial#].cal'.
 picoVNACOMObj.LoadCal('DefCal.cal');
