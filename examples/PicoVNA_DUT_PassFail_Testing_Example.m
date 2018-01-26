@@ -21,8 +21,7 @@
 %   Demonstrates how to use the VNA to compare DUTs to a saved Golden DUT
 %   and evaluate if the DUT is within tolerance of the Golden DUT
 %   measurement.
-%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
+
 
 %% Clear workspace, command window and close figures
 
@@ -160,3 +159,6 @@ end
 disconnectVNA(picoVNACOMObj)
 close PicoVNA 
 clear ans ax1 flag go i k n picoVNACOMObj
+
+%%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.

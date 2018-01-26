@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>PicoVNA Pass-Fail Testing Example</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-12"><meta name="DC.source" content="PicoVNA_DUT_PassFail_Testing_Example.m"><style type="text/css">
+      --><title>PicoVNA Pass-Fail Testing Example</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-26"><meta name="DC.source" content="PicoVNA_DUT_PassFail_Testing_Example.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,21 +66,21 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>PicoVNA Pass-Fail Testing Example</h1><!--introduction--><p>This is an example of a Pass/Fail test using the PicoVNA. This compares a S21 log magnitude sweep from a device to the same measurement of a previously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.</p><p>To run this example session, type the name of the file, PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.</p><p>The file, PicoVNA_DUT_PassFail_Testing_Example.m must be on your MATLAB Path. For additional information on setting your MATLAB path, type 'help addpath' in the MATLAB Command Window</p><p>Additionally you must have the .cal file for your device and the GoldenDUT.mat file in the current folder.</p><p><b>Example:</b>   PicoVNA_DUT_PassFail_Testing_Example;</p><p><b>Description:</b>   Demonstrates how to use the VNA to compare DUTs to a saved Golden DUT   and evaluate if the DUT is within tolerance of the Golden DUT   measurement.</p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. See LICENSE file for terms.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clear workspace, command window and close figures</a></li><li><a href="#2">Connect to VNA</a></li><li><a href="#3">Load calibration</a></li><li><a href="#4">Load Golden DUT log magnitude</a></li><li><a href="#5">Create pass band</a></li><li><a href="#6">Testing</a></li><li><a href="#8">Disconnect VNA</a></li></ul></div><h2 id="1">Clear workspace, command window and close figures</h2><pre class="codeinput">clear;
+  </style></head><body><div class="content"><h1>PicoVNA Pass-Fail Testing Example</h1><!--introduction--><p>This is an example of a Pass/Fail test using the PicoVNA. This compares a S21 log magnitude sweep from a device to the same measurement of a previously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.</p><p>To run this example session, type the name of the file, PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.</p><p>The file, PicoVNA_DUT_PassFail_Testing_Example.m must be on your MATLAB Path. For additional information on setting your MATLAB path, type 'help addpath' in the MATLAB Command Window</p><p>Additionally you must have the .cal file for your device and the GoldenDUT.mat file in the current folder.</p><p><b>Example:</b>   PicoVNA_DUT_PassFail_Testing_Example;</p><p><b>Description:</b>   Demonstrates how to use the VNA to compare DUTs to a saved Golden DUT   and evaluate if the DUT is within tolerance of the Golden DUT   measurement.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clear workspace, command window and close figures</a></li><li><a href="#2">Connect to VNA</a></li><li><a href="#3">Load calibration</a></li><li><a href="#4">Load Golden DUT log magnitude</a></li><li><a href="#5">Create pass band</a></li><li><a href="#6">Testing</a></li><li><a href="#8">Disconnect VNA</a></li></ul></div><h2>Clear workspace, command window and close figures<a name="1"></a></h2><pre class="codeinput">clear;
 clc;
 close <span class="string">all</span>;
-</pre><h2 id="2">Connect to VNA</h2><pre class="codeinput">picoVNACOMObj = connectVNA;
-</pre><h2 id="3">Load calibration</h2><p>Load a calibration and settings file. This needs to be generated and saved using the PicoVNA2 software.</p><pre class="codeinput"><span class="comment">% Replace DefCal.cal with the correct calibration for your device, 'Pico TD</span>
+</pre><h2>Connect to VNA<a name="2"></a></h2><pre class="codeinput">picoVNACOMObj = connectVNA;
+</pre><h2>Load calibration<a name="3"></a></h2><p>Load a calibration and settings file. This needs to be generated and saved using the PicoVNA2 software.</p><pre class="codeinput"><span class="comment">% Replace DefCal.cal with the correct calibration for your device, 'Pico TD</span>
 <span class="comment">% demo with limits [Serial#].cal'.</span>
 
 picoVNACOMObj.LoadCal(<span class="string">'DefCal.cal'</span>);
-</pre><h2 id="4">Load Golden DUT log magnitude</h2><p>Load in the reference data from the Golden Dut captured using PicoVNA_GoldenDUT_Example.m</p><pre class="codeinput">load(<span class="string">'GoldenDUT.mat'</span>);
-</pre><h2 id="5">Create pass band</h2><p>Create a pass band using the Golden DUT data and the tolererance in dB of the testing for comparison with the DUTs later.</p><pre class="codeinput">tolerance = 0.2; <span class="comment">% Tolerance of the cable in dB</span>
+</pre><h2>Load Golden DUT log magnitude<a name="4"></a></h2><p>Load in the reference data from the Golden Dut captured using PicoVNA_GoldenDUT_Example.m</p><pre class="codeinput">load(<span class="string">'GoldenDUT.mat'</span>);
+</pre><h2>Create pass band<a name="5"></a></h2><p>Create a pass band using the Golden DUT data and the tolererance in dB of the testing for comparison with the DUTs later.</p><pre class="codeinput">tolerance = 0.2; <span class="comment">% Tolerance of the cable in dB</span>
 
 <span class="comment">% Create the upper and lower bounds of the pass band.</span>
 Error.Upper = Golden.S12LogMag + tolerance;
 Error.Lower = Golden.S12LogMag - tolerance;
-</pre><h2 id="6">Testing</h2><p>Create a stop button for ending testing.</p><pre class="codeinput">[stopFig.f, stopFig.h] = stopButtonVNA(50, 200, 1000, 500);
+</pre><h2>Testing<a name="6"></a></h2><p>Create a stop button for ending testing.</p><pre class="codeinput">[stopFig.f, stopFig.h] = stopButtonVNA(50, 200, 1000, 500);
 
 flag = 1; <span class="comment">% Use flag variable to indicate if stop button has been clicked (0)</span>
 setappdata(gcf, <span class="string">'run'</span>, flag);
@@ -171,10 +171,10 @@ go = 1; <span class="comment">% While loop condition (1 = run, 0 = stop)</span>
     <span class="keyword">end</span>
 
 <span class="keyword">end</span>
-</pre><h2 id="8">Disconnect VNA</h2><pre class="codeinput">disconnectVNA(picoVNACOMObj)
+</pre><h2>Disconnect VNA<a name="8"></a></h2><pre class="codeinput">disconnectVNA(picoVNACOMObj)
 close <span class="string">PicoVNA</span>
 clear <span class="string">ans</span> <span class="string">ax1</span> <span class="string">flag</span> <span class="string">go</span> <span class="string">i</span> <span class="string">k</span> <span class="string">n</span> <span class="string">picoVNACOMObj</span>
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+</pre><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. See LICENSE file for terms.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% PicoVNA Pass-Fail Testing Example
 %
@@ -199,8 +199,7 @@ clear <span class="string">ans</span> <span class="string">ax1</span> <span clas
 %   Demonstrates how to use the VNA to compare DUTs to a saved Golden DUT
 %   and evaluate if the DUT is within tolerance of the Golden DUT
 %   measurement.
-%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
+
 
 %% Clear workspace, command window and close figures
 
@@ -338,5 +337,8 @@ end
 disconnectVNA(picoVNACOMObj)
 close PicoVNA 
 clear ans ax1 flag go i k n picoVNACOMObj
+
+%%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
 ##### SOURCE END #####
 --></body></html>

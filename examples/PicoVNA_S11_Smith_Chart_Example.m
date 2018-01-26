@@ -21,8 +21,6 @@
 %
 % *Description:*
 %   Demonstrates how to use the VNA to collect data from a DUT and then display it onto a Smith Chart.
-%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
 
 %% Clear workspace, command window and close figures
 
@@ -92,3 +90,6 @@ disconnectVNA(picoVNACOMObj)
 % Tidy workspace
 close PicoVNA 
 clear ans flag go stopFig picoVNACOMObj
+
+%%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.

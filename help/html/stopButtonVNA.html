@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>StopButtonVNA</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-12"><meta name="DC.source" content="stopButtonVNA.m"><style type="text/css">
+      --><title>stopButtonVNA</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-26"><meta name="DC.source" content="stopButtonVNA.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,17 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>StopButtonVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li><li><a href="#2">Input arguments:</a></li><li><a href="#3">Output arguments:</a></li></ul></div><h2 id="1">Description</h2><p>StopButtonVNA  Displays a stop button.</p><pre class="language-matlab">[F, H] = StopButton(X, Y, H, W) displays <span class="string">a</span> <span class="string">Stop</span> <span class="string">button</span> <span class="string">to</span> <span class="string">check</span> <span class="string">abort</span> <span class="string">of</span> <span class="string">data</span> <span class="string">collection</span> <span class="string">-</span>
-based <span class="string">on</span> <span class="string">MathWorks</span> <span class="string">solution</span> <span class="string">1-15JIQ</span> <span class="string">(http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine)</span> <span class="string">and</span> <span class="string">MATLAB</span> <span class="string">Central</span> <span class="string">Forum.</span>
-</pre><h2 id="2">Input arguments:</h2><pre class="language-matlab">X - See left <span class="string">in</span> <span class="string">Location</span> <span class="string">and</span> <span class="string">Size</span> <span class="string">for</span> <span class="string">FIGURE</span>
-Y - See bottom <span class="string">in</span> <span class="string">Location</span> <span class="string">and</span> <span class="string">Size</span> <span class="string">for</span> <span class="string">FIGURE</span>
-W - See width <span class="string">in</span> <span class="string">Location</span> <span class="string">and</span> <span class="string">Size</span> <span class="string">for</span> <span class="string">FIGURE</span>
-H - See height <span class="string">in</span> <span class="string">Location</span> <span class="string">and</span> <span class="string">Size</span> <span class="string">for</span> <span class="string">FIGURE</span>
-</pre><h2 id="3">Output arguments:</h2><pre class="language-matlab">F - the handle <span class="string">to</span> <span class="string">the</span> <span class="untermstring">button's figure</span>
-H - the uicontrol <span class="string">object.</span>
-</pre><pre class="language-matlab">Copyright: &copy; 2017-2018 Pico <span class="string">Technology</span> <span class="string">Ltd.</span> <span class="string">All</span> <span class="string">rights</span> <span class="string">reserved.</span>
-</pre><pre class="language-matlab">See <span class="string">also</span> <span class="string">FIGURE</span>, UICONTROL.
-</pre><pre class="codeinput"><span class="keyword">function</span> [f, h] = stopButton(x, y, w, h)
+  </style></head><body><div class="content"><h1>stopButtonVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li><li><a href="#2">Input arguments:</a></li><li><a href="#3">Output arguments:</a></li></ul></div><h2>Description<a name="1"></a></h2><p>StopButtonVNA  Displays a stop button.</p><p>[F, H] = StopButton(X, Y, H, W) displays a Stop button to check abort of data collection - based on MathWorks solution 1-15JIQ (<a href="http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine">http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine</a>) and MATLAB Central Forum.</p><h2>Input arguments:<a name="2"></a></h2><p>X - See left in Location and Size for FIGURE Y - See bottom in Location and Size for FIGURE W - See width in Location and Size for FIGURE H - See height in Location and Size for FIGURE</p><h2>Output arguments:<a name="3"></a></h2><p>F - the handle to the button's figure H - the uicontrol object.</p><p>See also <a href="matlab:doc('figure')">figure</a> , <a href="matlab:doc('uicontrol')">uicontrol</a> .</p><pre class="codeinput"><span class="keyword">function</span> [f, h] = stopButton(x, y, w, h)
     <span class="comment">% Check for valid inputs</span>
     validateattributes(x,{<span class="string">'numeric'</span>},{<span class="string">'nonnegative'</span>});
     validateattributes(y,{<span class="string">'numeric'</span>},{<span class="string">'nonnegative'</span>});
@@ -92,32 +82,32 @@ H - the uicontrol <span class="string">object.</span>
                 <span class="string">'position'</span>,[10 10 100 30]);
 
 <span class="keyword">end</span>
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+</pre><pre class="language-matlab">Copyright: &copy; 2017-2018 Pico <span class="string">Technology</span> <span class="string">Ltd.</span> <span class="string">All</span> <span class="string">rights</span> <span class="string">reserved.</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% StopButtonVNA
+%% stopButtonVNA
 %
 %% Description
 %
 % StopButtonVNA  Displays a stop button.
 %
-%   [F, H] = StopButton(X, Y, H, W) displays a Stop button to check abort of data collection - 
-%   based on MathWorks solution 1-15JIQ (http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine) and MATLAB Central Forum.
+% [F, H] = StopButton(X, Y, H, W) displays a Stop button to check abort of data collection - 
+% based on MathWorks solution 1-15JIQ (http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine) and MATLAB Central Forum.
 %   
 %% Input arguments:
 %
-%   X - See left in Location and Size for FIGURE
-%   Y - See bottom in Location and Size for FIGURE
-%   W - See width in Location and Size for FIGURE
-%   H - See height in Location and Size for FIGURE
+% X - See left in Location and Size for FIGURE
+% Y - See bottom in Location and Size for FIGURE
+% W - See width in Location and Size for FIGURE
+% H - See height in Location and Size for FIGURE
 %
 %% Output arguments:
 %
-%   F - the handle to the button's figure 
-%   H - the uicontrol object.
+% F - the handle to the button's figure 
+% H - the uicontrol object.
 %
-%   Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
-%
-%   See also FIGURE, UICONTROL.
+% See also <matlab:doc('figure') figure> , <matlab:doc('uicontrol') uicontrol> .
+
 
 function [f, h] = stopButton(x, y, w, h)
     % Check for valid inputs
@@ -136,6 +126,7 @@ function [f, h] = stopButton(x, y, w, h)
 
 end
 
-
+%%
+%   Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
 ##### SOURCE END #####
 --></body></html>

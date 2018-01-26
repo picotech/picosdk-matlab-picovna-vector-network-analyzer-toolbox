@@ -3,7 +3,7 @@
     <name>PicoVNA 106 Vector Network Analyzer Toolbox</name>
     <type>toolbox</type>
     <icon>HelpIcon.DEMOS</icon>
-    <description>This toolbox contains a number of examples demonstrating how to call Instrument Driver functions to collect data and also a basic DUT pass/fail test.</description>
+    <description>This toolbox contains a number of examples demonstrating how to call functions to collect data and also a basic DUT pass/fail test.</description>
     <website></website>
     
     <demosection>
