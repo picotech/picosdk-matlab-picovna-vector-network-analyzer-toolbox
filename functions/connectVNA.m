@@ -1,15 +1,17 @@
 %% connectVNA
 %
 %% Description
-% connectVNA Creates PicoVNA COM object.
 %
-% connectVNA() returns a COM object to a PicoVNA device.
+% connectVNA() creates and returns a COM object to a PicoVNA device.
+%
+% Output Arguments
+%
+% * obj - the VNA COM object corresponding to the PicoVNA device
 %
 % See also <disconnectVNA.html disconnectVNA> .
-%
-
 
 function [obj] = connectVNA()
+
     % Create VNA COM object.
     obj = actxserver('PicoControl2.PicoVNA_2');
 
