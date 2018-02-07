@@ -5,7 +5,7 @@
 % disconnectVNA(obj) closes the connection to the VNA and deletes the COM
 % Object from the workspace:
 %
-% Input Arguments
+% *Input Arguments:*
 %
 % * obj - the COM object pointing to the PicoVNA device.
 % 

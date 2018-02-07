@@ -7,13 +7,13 @@
 % The Measure command should be called on the COM object corresponding to
 % the PicoVNA device before calling this function.
 %
-% Input arguments:
+% *Input arguments:*
 %
 % * obj - the VNA COM object corresponding to the PicoVNA device
 % * Spara - the S parameter for which data is required
 % * datatype - the measurement type for which you require data 
 %
-% Output arguments:
+% *Output arguments:*
 %
 % * frequency - a vector of the frequency values
 % * data - a vector of data points for the measurement

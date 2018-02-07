@@ -5,14 +5,14 @@
 % [f, h] = stopButton(x, y, h, w) displays a Stop button to check abort of data collection - 
 % based on <http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine MathWorks solution 1-15JIQ> and <https://uk.mathworks.com/matlabcentral/amswers/index MATLAB Central Answers>.
 %   
-% Input arguments:
+% *Input arguments:*
 %
 % * x - See left in Location and Size for figure
 % * y - See bottom in Location and Size for figure
 % * w - See width in Location and Size for figure
 % * h - See height in Location and Size for figure
 %
-% Output arguments:
+% *Output arguments:*
 %
 % * f - the handle to the button's figure 
 % * h - the uicontrol object.

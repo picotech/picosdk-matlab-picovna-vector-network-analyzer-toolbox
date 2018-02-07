@@ -4,7 +4,7 @@
 %
 % connectVNA() creates and returns a COM object to a PicoVNA device.
 %
-% Output Arguments
+% *Output Arguments:*
 %
 % * obj - the VNA COM object corresponding to the PicoVNA device
 %

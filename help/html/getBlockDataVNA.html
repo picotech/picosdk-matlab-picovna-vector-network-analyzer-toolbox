@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>getBlockDataVNA</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-02-02"><meta name="DC.source" content="getBlockDataVNA.m"><style type="text/css">
+      --><title>getBlockDataVNA</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-02-07"><meta name="DC.source" content="getBlockDataVNA.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>getBlockDataVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p>getBlockDataVNA Returns frequency and data points.</p><p>getBlockDataVNA(obj, Spara, datatype) returns frequency and data points from a measurement sweep performed by a PicoVNA on a DUT. The Measure command should be called on the COM object corresponding to the PicoVNA device before calling this function.</p><p>Input arguments:</p><div><ul><li>obj - the VNA COM object corresponding to the PicoVNA device</li><li>Spara - the S parameter for which data is required</li><li>datatype - the measurement type for which you require data</li></ul></div><p>Output arguments:</p><div><ul><li>frequency - a vector of the frequency values</li><li>data - a vector of data points for the measurement</li></ul></div><pre class="codeinput"><span class="keyword">function</span> [frequency, data] = getBlockDataVNA(obj, Spara, datatype)
+  </style></head><body><div class="content"><h1>getBlockDataVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p>getBlockDataVNA(obj, Spara, datatype) returns frequency and data points from a measurement sweep performed by a PicoVNA on a DUT. The Measure command should be called on the COM object corresponding to the PicoVNA device before calling this function.</p><p><b>Input arguments:</b></p><div><ul><li>obj - the VNA COM object corresponding to the PicoVNA device</li><li>Spara - the S parameter for which data is required</li><li>datatype - the measurement type for which you require data</li></ul></div><p><b>Output arguments:</b></p><div><ul><li>frequency - a vector of the frequency values</li><li>data - a vector of data points for the measurement</li></ul></div><pre class="codeinput"><span class="keyword">function</span> [frequency, data] = getBlockDataVNA(obj, Spara, datatype)
 
     <span class="comment">% Check for valid inputs</span>
     validateattributes(obj,{<span class="string">'COM.PicoControl2_PicoVNA__2'</span>},{});
@@ -91,20 +91,19 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %% getBlockDataVNA
 %
 %% Description
-% getBlockDataVNA Returns frequency and data points.
 %
 % getBlockDataVNA(obj, Spara, datatype) returns frequency and data points
 % from a measurement sweep performed by a PicoVNA on a DUT.
 % The Measure command should be called on the COM object corresponding to
 % the PicoVNA device before calling this function.
 %
-% Input arguments:
+% *Input arguments:*
 %
 % * obj - the VNA COM object corresponding to the PicoVNA device
 % * Spara - the S parameter for which data is required
 % * datatype - the measurement type for which you require data 
 %
-% Output arguments:
+% *Output arguments:*
 %
 % * frequency - a vector of the frequency values
 % * data - a vector of data points for the measurement
