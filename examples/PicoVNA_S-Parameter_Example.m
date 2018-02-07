@@ -22,7 +22,8 @@
 % measurements and collect data for S11, S12, S21 and S22.  The
 % S-aparamters are plotted onto auto-scaled plots.  The measurement and
 % data collection is looped until the user stops the process.
-
+%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
 
 %% Clear workspace, command window and close figures
 
@@ -194,6 +195,3 @@ disconnectVNA(picoVNACOMObj)
 
 % Tidy workspace
 clear ans flag go maxS11 minS11 maxS12 minS12 maxS21 minS21 maxS22 minS22 picoVNACOMObj
-
-%%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.

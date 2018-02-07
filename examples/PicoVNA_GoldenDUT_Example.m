@@ -21,7 +21,8 @@
 % *Description:*
 %   Demonstrates how to use the VNA to collect and save data for a Golden
 %   DUT for use in the PicoVNA_DUT_PassFail_Example.m script.
-
+%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
 
 %% Clear workspace, command window and close figures
 
@@ -58,6 +59,3 @@ save ('GoldenDUT.mat', 'Golden');
 disconnectVNA(picoVNACOMObj);
 
 disp('Complete');
-
-%%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
