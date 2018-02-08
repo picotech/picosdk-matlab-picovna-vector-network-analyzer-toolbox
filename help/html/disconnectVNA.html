@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>disconnectVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p>disconnectVNA(obj) closes the connection to the VNA and deletes the COM Object from the workspace:</p><p><b>Input Arguments:</b></p><div><ul><li><tt>obj</tt> - the COM object pointing to the PicoVNA device.</li></ul></div><p>See also <a href="connectVNA.html">connectVNA</a> .</p><pre class="codeinput"><span class="keyword">function</span> disconnectVNA(obj)
+  </style></head><body><div class="content"><h1>disconnectVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p><tt>disconnectVNA(obj)</tt> closes the connection to the VNA and deletes the COM Object from the workspace:</p><p><b>Input Arguments:</b></p><div><ul><li><tt>obj</tt> - the COM object pointing to the PicoVNA device.</li></ul></div><p>See also <a href="connectVNA.html">connectVNA</a> .</p><pre class="codeinput"><span class="keyword">function</span> disconnectVNA(obj)
 
     <span class="comment">% Check inputs are valid</span>
     validateattributes(obj,{<span class="string">'COM.PicoControl2_PicoVNA__2'</span>},{});
@@ -84,7 +84,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 %% Description
 %
-% disconnectVNA(obj) closes the connection to the VNA and deletes the COM
+% |disconnectVNA(obj)| closes the connection to the VNA and deletes the COM
 % Object from the workspace:
 %
 % *Input Arguments:*

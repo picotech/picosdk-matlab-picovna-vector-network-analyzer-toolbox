@@ -2,7 +2,7 @@
 %
 %% Description
 %
-% getBlockDataVNA(obj, Spara, datatype) returns frequency and data points
+% |getBlockDataVNA(obj, Spara, datatype)| returns frequency and data points
 % from a measurement sweep performed by a PicoVNA on a DUT.
 % The Measure command should be called on the COM object corresponding to
 % the PicoVNA device before calling this function.

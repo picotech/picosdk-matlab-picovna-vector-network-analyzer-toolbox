@@ -2,7 +2,7 @@
 %
 %% Description
 %
-% disconnectVNA(obj) closes the connection to the VNA and deletes the COM
+% |disconnectVNA(obj)| closes the connection to the VNA and deletes the COM
 % Object from the workspace:
 %
 % *Input Arguments:*

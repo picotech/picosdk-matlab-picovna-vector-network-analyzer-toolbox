@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>stopButtonVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p>[f, h] = stopButton(x, y, h, w) displays a Stop button to check abort of data collection - based on <a href="http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine">MathWorks solution 1-15JIQ</a> and <a href="https://uk.mathworks.com/matlabcentral/amswers/index">MATLAB Central Answers</a>.</p><p><b>Input arguments:</b></p><div><ul><li><tt>x</tt> - See left in Location and Size for figure</li><li><tt>y</tt> - See bottom in Location and Size for figure</li><li><tt>w</tt> - See width in Location and Size for figure</li><li><tt>h</tt> - See height in Location and Size for figure</li></ul></div><p><b>Output arguments:</b></p><div><ul><li><tt>f</tt> - the handle to the button's figure</li><li><tt>h</tt> - the uicontrol object.</li></ul></div><p>See also <a href="matlab:doc('figure')">figure</a> | <a href="matlab:doc('uicontrol')">uicontrol</a> .</p><pre class="codeinput"><span class="keyword">function</span> [f, h] = stopButton(x, y, w, h)
+  </style></head><body><div class="content"><h1>stopButtonVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2>Description<a name="1"></a></h2><p><tt>[f, h] = stopButton(x, y, h, w)</tt> displays a Stop button to check abort of data collection - based on <a href="http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine">MathWorks solution 1-15JIQ</a> and <a href="https://uk.mathworks.com/matlabcentral/amswers/index">MATLAB Central Answers</a>.</p><p><b>Input arguments:</b></p><div><ul><li><tt>x</tt> - See left in Location and Size for figure</li><li><tt>y</tt> - See bottom in Location and Size for figure</li><li><tt>w</tt> - See width in Location and Size for figure</li><li><tt>h</tt> - See height in Location and Size for figure</li></ul></div><p><b>Output arguments:</b></p><div><ul><li><tt>f</tt> - the handle to the button's figure</li><li><tt>h</tt> - the uicontrol object.</li></ul></div><p>See also <a href="matlab:doc('figure')">figure</a> | <a href="matlab:doc('uicontrol')">uicontrol</a> .</p><pre class="codeinput"><span class="keyword">function</span> [f, h] = stopButton(x, y, w, h)
 
     <span class="comment">% Check for valid inputs</span>
     validateattributes(x,{<span class="string">'numeric'</span>},{<span class="string">'nonnegative'</span>});
@@ -89,7 +89,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 %% Description
 %
-% [f, h] = stopButton(x, y, h, w) displays a Stop button to check abort of data collection - 
+% |[f, h] = stopButton(x, y, h, w)| displays a Stop button to check abort of data collection - 
 % based on <http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine MathWorks solution 1-15JIQ> and <https://uk.mathworks.com/matlabcentral/amswers/index MATLAB Central Answers>.
 %   
 % *Input arguments:*
