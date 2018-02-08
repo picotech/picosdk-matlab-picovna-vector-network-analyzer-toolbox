@@ -2,17 +2,17 @@
 %
 % This is an example of a Pass/Fail test using the PicoVNA. This compares a
 % S21 log magnitude sweep from a device to the same measurement of a
-% previously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.
+% previously measured Golden DUT using the |PicoVNA_GoldenDUT_Example.m| file.
 %
 % To run this example session, type the name of the file,
 % PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.
 %
-% The file, PicoVNA_DUT_PassFail_Testing_Example.m must be on your MATLAB
+% The file, |PicoVNA_DUT_PassFail_Testing_Example.m| must be on your MATLAB
 % Path. For additional information on setting your MATLAB path, type 'help
 % addpath' in the MATLAB Command Window
 %
-% Additionally you must have the .cal file for your device and the
-% GoldenDUT.mat file in the current folder.
+% Additionally you must have the |.cal| file for your device and the
+% |GoldenDUT.mat| file in the current folder.
 %
 % *Example:*
 %   PicoVNA_DUT_PassFail_Testing_Example;

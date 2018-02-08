@@ -7,15 +7,15 @@
 %   
 % *Input arguments:*
 %
-% * x - See left in Location and Size for figure
-% * y - See bottom in Location and Size for figure
-% * w - See width in Location and Size for figure
-% * h - See height in Location and Size for figure
+% * |x| - See left in Location and Size for figure
+% * |y| - See bottom in Location and Size for figure
+% * |w| - See width in Location and Size for figure
+% * |h| - See height in Location and Size for figure
 %
 % *Output arguments:*
 %
-% * f - the handle to the button's figure 
-% * h - the uicontrol object.
+% * |f| - the handle to the button's figure 
+% * |h| - the uicontrol object.
 %
 % See also <matlab:doc('figure') figure> | <matlab:doc('uicontrol') uicontrol> .
 
@@ -39,4 +39,4 @@ function [f, h] = stopButton(x, y, w, h)
 end
 
 %%
-% Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.

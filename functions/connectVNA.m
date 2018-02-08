@@ -6,7 +6,7 @@
 %
 % *Output Arguments:*
 %
-% * obj - the VNA COM object corresponding to the PicoVNA device
+% * |obj| - the VNA COM object corresponding to the PicoVNA device
 %
 % See also <disconnectVNA.html disconnectVNA> .
 
@@ -25,4 +25,4 @@ function [obj] = connectVNA()
 end
 
 %%
-% Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.

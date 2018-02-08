@@ -9,14 +9,14 @@
 %
 % *Input arguments:*
 %
-% * obj - the VNA COM object corresponding to the PicoVNA device
-% * Spara - the S parameter for which data is required
-% * datatype - the measurement type for which you require data 
+% * |obj| - the VNA COM object corresponding to the PicoVNA device
+% * |Spara| - the S parameter for which data is required
+% * |datatype| - the measurement type for which you require data 
 %
 % *Output arguments:*
 %
-% * frequency - a vector of the frequency values
-% * data - a vector of data points for the measurement
+% * |frequency| - a vector of the frequency values
+% * |data| - a vector of data points for the measurement
 
 
 function [frequency, data] = getBlockDataVNA(obj, Spara, datatype)
@@ -41,4 +41,4 @@ function [frequency, data] = getBlockDataVNA(obj, Spara, datatype)
 end
 
 %%
-% Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.

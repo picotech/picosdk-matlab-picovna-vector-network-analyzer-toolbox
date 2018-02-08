@@ -7,11 +7,11 @@
 % To run this example session, type the name of the file,
 % PicoVNA_S-Parameter_Example, in the MATLAB Command Window.
 %
-% The file, PicoVNA_S-Parameter_Example.m must be on your MATLAB Path. For
+% The file, |PicoVNA_S-Parameter_Example.m| must be on your MATLAB Path. For
 % additional information on setting your MATLAB path, type 'help addpath' in
 % the MATLAB Command Window
 %
-% Additionally you must have the .cal file for your device in the current
+% Additionally you must have the |.cal| file for your device in the current
 % folder.
 %
 % *Example:*
