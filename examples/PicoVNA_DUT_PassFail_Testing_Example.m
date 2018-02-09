@@ -5,11 +5,11 @@
 % previously measured Golden DUT using the |PicoVNA_GoldenDUT_Example.m| file.
 %
 % To run this example session, type the name of the file,
-% PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.
+% |PicoVNA_DUT_PassFail_Testing_Example|, in the MATLAB Command Window.
 %
 % The file, |PicoVNA_DUT_PassFail_Testing_Example.m| must be on your MATLAB
-% Path. For additional information on setting your MATLAB path, type 'help
-% addpath' in the MATLAB Command Window
+% Path. For additional information on setting your MATLAB path, see
+% <matlab:doc('addpath') addpath>.
 %
 % Additionally you must have the |.cal| file for your device and the
 % |GoldenDUT.mat| file in the current folder.
@@ -38,14 +38,14 @@ picoVNACOMObj = connectVNA;
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA2 software.
 
-% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
-% demo with limits [Serial#].cal'.
+% Replace |DefCal.cal| with the correct calibration for your device, |'Pico TD
+% demo with limits [Serial#].cal'|.
 
 picoVNACOMObj.LoadCal('DefCal.cal');
 
 %% Load Golden DUT log magnitude
 % Load in the reference data from the Golden Dut captured using
-% PicoVNA_GoldenDUT_Example.m
+% <PicoVNA_GoldenDUT_Example.html |PicoVNA_GoldenDUT_Example|>
 
 load('GoldenDUT.mat');
 

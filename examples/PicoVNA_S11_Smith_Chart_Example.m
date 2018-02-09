@@ -5,11 +5,11 @@
 % Chart.
 %
 % To run this example session, type the name of the file,
-% PicoVNA_S11_Smith_Chart_Example, in the MATLAB Command Window.
+% |PicoVNA_S11_Smith_Chart_Example|, in the MATLAB Command Window.
 %
 % The file, |PicoVNA_S11_Smith_Chart_Example.m| must be on your MATLAB Path. For
-% additional information on setting your MATLAB path, type 'help addpath' in
-% the MATLAB Command Window.
+% additional information on setting your MATLAB path, see
+% <matlab:doc('addpath') addpath>.
 %
 % Additionally you must have the |.cal| file for your device in the current
 % folder.
@@ -38,8 +38,8 @@ picoVNACOMObj = connectVNA;
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA 2 software.
 %
-% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
-% demo with limits [Serial#].cal'.
+% Replace |DefCal.cal| with the correct calibration for your device, |'Pico TD
+% demo with limits [Serial#].cal|.
 
 picoVNACOMObj.LoadCal('DefCal.cal');
 

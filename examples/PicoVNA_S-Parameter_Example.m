@@ -1,15 +1,14 @@
 %% PicoVNA S-Parameter Example
 %
 % This is an example of setting up the connection with the Pico Technology
-% PicoVNA 106, loading calibration data, making measurements and collecting
-% the log magnitude data for S11, S12, S21 and S22.
+% PicoVNA Vector Newtwork Analyzer, loading calibration data, making measurements and collecting
+% the log magnitude data for S11, S12, S21 and S22 parameters.
 %
 % To run this example session, type the name of the file,
-% PicoVNA_S-Parameter_Example, in the MATLAB Command Window.
+% |PicoVNA_S-Parameter_Example|, in the MATLAB Command Window.
 %
 % The file, |PicoVNA_S-Parameter_Example.m| must be on your MATLAB Path. For
-% additional information on setting your MATLAB path, type 'help addpath' in
-% the MATLAB Command Window
+% additional information on setting your MATLAB path, see <matlab:doc('addpath') addpath>
 %
 % Additionally you must have the |.cal| file for your device in the current
 % folder.
@@ -19,8 +18,8 @@
 %
 % *Description:*
 % Demonstrates how to connect to the VNA, load in a calibration, make
-% measurements and collect data for S11, S12, S21 and S22.  The
-% S-aparamters are plotted onto auto-scaled plots.  The measurement and
+% measurements and collect data for S11, S12, S21 and S22 parameters.  The
+% S-parameters are plotted onto auto-scaled plots.  The measurement and
 % data collection is looped until the user stops the process.
 %
 % *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
@@ -39,8 +38,8 @@ picoVNACOMObj = connectVNA;
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA 2 software.
 %
-% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
-% demo with limits [Serial#].cal'.
+% Replace |DefCal.cal| with the correct calibration for your device, |'Pico TD
+% demo with limits [Serial#].cal'|.
 picoVNACOMObj.LoadCal('DefCal.cal');
 
 %% Stop button for exiting loop

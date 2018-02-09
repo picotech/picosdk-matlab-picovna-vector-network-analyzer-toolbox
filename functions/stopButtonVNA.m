@@ -7,15 +7,15 @@
 %   
 % *Input arguments:*
 %
-% * |x| - See left in Location and Size for figure
-% * |y| - See bottom in Location and Size for figure
-% * |w| - See width in Location and Size for figure
-% * |h| - See height in Location and Size for figure
+% * |x| - See |left| in Location and Size for figure
+% * |y| - See |bottom| in Location and Size for figure
+% * |w| - See |width| in Location and Size for figure
+% * |h| - See |height| in Location and Size for figure
 %
 % *Output arguments:*
 %
 % * |f| - the handle to the button's figure 
-% * |h| - the uicontrol object.
+% * |h| - the |uicontrol| object.
 %
 % See also <matlab:doc('figure') figure> | <matlab:doc('uicontrol') uicontrol> .
 

@@ -3,14 +3,14 @@
 % This is an example of Golden DUT data aquisition using the PicoVNA.  This
 % makes a measurement of the Golden DUT and retrieves the S21 log magnitude
 % data from the VNA ready for use in the
-% PicoVNA_DUT_PassFail_Testing_Example.
+% <PicoVNA_DUT_PassFail_testing_Example.html |PicoVNA_DUT_PassFail_Testing_Example|>.
 %
 % To run this example session, type the name of the file,
 % PicoVNA_GoldenDUT_Example, in the MATLAB Command Window.
 %
 % The file, |PicoVNA_GoldenDUT_Example.m| must be on your MATLAB Path. For
-% additional information on setting your MATLAB path, type 'help addpath'
-% in the MATLAB Command Window
+% additional information on setting your MATLAB path, see
+% <matlab:doc('addpath') addpath>.
 %
 % Additionally you must have the |.cal| file for your device in the current
 % folder.
@@ -38,8 +38,8 @@ picoVNACOMObj = connectVNA;
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA 2 software.
 %
-% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
-% demo with limits [Serial#].cal'.
+% Replace |DefCal.cal| with the correct calibration for your device, |'Pico TD
+% demo with limits [Serial#].cal'|.
 picoVNACOMObj.LoadCal('DefCal.cal');
 
 %% Measure Golden DUT
@@ -50,7 +50,7 @@ picoVNACOMObj.Measure('ALL');
 [Golden.Frequency, Golden.S12LogMag] = getBlockDataVNA(picoVNACOMObj,'S21','logmag');
 
 %% Save Golden DUT Data
-% Save the Golden DUT data read for use in the Pass/Fail Testing Example.
+% Save the Golden DUT data read for use in the <PicoVNA_DUT_PassFail_Testing_example.html Pass/Fail Testing Example>.
 
 save ('GoldenDUT.mat', 'Golden');
 
