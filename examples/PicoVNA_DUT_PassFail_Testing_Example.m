@@ -37,9 +37,9 @@ picoVNACOMObj = connectVNA;
 %% Load calibration
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA2 software.
-
-% Replace |DefCal.cal| with the correct calibration for your device, |'Pico TD
-% demo with limits [Serial#].cal'|.
+%
+% Replace |DefCal.cal| with the correct calibration for your device, |Pico TD
+% demo with limits [Serial#].cal|.
 
 picoVNACOMObj.LoadCal('DefCal.cal');
 

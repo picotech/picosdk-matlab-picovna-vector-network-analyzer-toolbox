@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>stopButtonVNA</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-02-09"><meta name="DC.source" content="picovna_tbx_stopButtonVNA.m"><style type="text/css">
+      --><title>stopButtonVNA</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-02-12"><meta name="DC.source" content="picovna_tbx_stopButtonVNA.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,13 +67,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
   </style></head><body><div class="content"><h1>stopButtonVNA</h1><pre class="codeinput">[f, h] = stopButton(x, y, w, h)
-</pre><p><b>Description</b></p><p><tt>[f, h] = stopButton(x, y, h, w)</tt> displays a Stop button to check abort of data collection - based on <a href="http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine">MathWorks solution 1-15JIQ</a> and <a href="https://uk.mathworks.com/matlabcentral/amswers/index">MATLAB Central Answers</a>.</p><p><b>Input arguments:</b></p><div><ul><li><tt>x</tt> - See left in Location and Size for figure</li><li><tt>y</tt> - See bottom in Location and Size for figure</li><li><tt>w</tt> - See width in Location and Size for figure</li><li><tt>h</tt> - See height in Location and Size for figure</li></ul></div><p><b>Output arguments:</b></p><div><ul><li><tt>f</tt> - the handle to the button's figure</li><li><tt>h</tt> - the uicontrol object.</li></ul></div><p><b>Example</b></p><pre class="codeinput">X=0;
-Y=50;
-W=1350;
-H=1000;
+</pre><p><b>Description</b></p><p><tt>[f, h] = stopButton(x, y, h, w)</tt> displays a Stop button to check abort of data collection - based on <a href="http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine">MathWorks solution 1-15JIQ</a> and <a href="https://uk.mathworks.com/matlabcentral/amswers/index">MATLAB Central Answers</a>.</p><p><b>Input arguments:</b></p><div><ul><li><tt>x</tt> - See <tt>left</tt> in Location and Size for <tt>figure</tt></li><li><tt>y</tt> - See <tt>bottom</tt> in Location and Size for <tt>figure</tt></li><li><tt>w</tt> - See <tt>width</tt> in Location and Size for <tt>figure</tt></li><li><tt>h</tt> - See <tt>height</tt> in Location and Size for <tt>figure</tt></li></ul></div><p><b>Output arguments:</b></p><div><ul><li><tt>f</tt> - the handle to the button's figure</li><li><tt>h</tt> - the <tt>uicontrol</tt> object.</li></ul></div><p><b>Example</b></p><pre class="codeinput">X = 0;
 
-[stopButton.f, stopButton.h] = stopButtonVNA(X, W, W,H);
-</pre><p>See also <a href="matlab:doc('figure')">figure</a> | <a href="matlab:doc('uicontrol')">uicontrol</a> .</p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+Y = 50;
+
+W = 1350;
+
+H = 1000;
+
+[stopButton.f, stopButton.h] = stopButtonVNA(X, Y, W, H);
+</pre><p><b>See also:</b> <a href="matlab:doc('figure')"><tt>figure</tt></a> | <a href="matlab:doc('uicontrol')"><tt>uicontrol</tt></a></p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. All rights reserved.</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% stopButtonVNA
 %
@@ -86,28 +89,31 @@ H=1000;
 %   
 % *Input arguments:*
 %
-% * |x| - See left in Location and Size for figure
-% * |y| - See bottom in Location and Size for figure
-% * |w| - See width in Location and Size for figure
-% * |h| - See height in Location and Size for figure
+% * |x| - See |left| in Location and Size for |figure|
+% * |y| - See |bottom| in Location and Size for |figure|
+% * |w| - See |width| in Location and Size for |figure|
+% * |h| - See |height| in Location and Size for |figure|
 %
 % *Output arguments:*
 %
 % * |f| - the handle to the button's figure 
-% * |h| - the uicontrol object.
+% * |h| - the |uicontrol| object.
 %
 % *Example*
 
-X=0;
-Y=50;
-W=1350;
-H=1000;
+X = 0;
 
-[stopButton.f, stopButton.h] = stopButtonVNA(X, W, W,H); 
+Y = 50;
+
+W = 1350;
+
+H = 1000;
+
+[stopButton.f, stopButton.h] = stopButtonVNA(X, Y, W, H); 
 
 
 %%
-% See also <matlab:doc('figure') figure> | <matlab:doc('uicontrol') uicontrol> .
+% *See also:* <matlab:doc('figure') |figure|> | <matlab:doc('uicontrol') |uicontrol|> 
 %
 % *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.
 ##### SOURCE END #####
