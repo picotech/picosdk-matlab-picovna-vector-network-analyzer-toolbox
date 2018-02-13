@@ -11,7 +11,7 @@
         <demoitem>
             <label>PicoVNA S-Parameter Example</label>
             <type>M-file</type>
-            <source>PicoVNA_S-Paramater_Example</source>
+            <source>PicoVNA_S-Parameter_Example</source>
         </demoitem>
         <demoitem>
             <label>PicoVNA S11 Smith Chart Example</label>
