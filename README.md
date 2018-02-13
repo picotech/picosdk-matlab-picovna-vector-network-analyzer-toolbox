@@ -10,7 +10,7 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 ### Prerequisites
 
 * [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows (32-bit)
-* PicoVNA 2 software (see [Installing software](#Installing software))
+* PicoVNA 2 software (see [Installing software](#installing-software))
 
 **Notes:**
 
