@@ -10,12 +10,14 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 ### Prerequisites
 
 * [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows (32-bit)
+* [RF Toolbox](https://uk.mathworks.com/products/rftoolbox.html)
 * PicoVNA 2 software (see [Installing software](#installing-software))
 
 **Notes:**
 
 * MATLAB 2015b is recommended for 32-bit versions of MATLAB on Microsoft Windows operating systems.
 * The interface to the PicoVNA Network Analyzers is not currently compatible with 64-bit versions of MATLAB. 
+* RF Toolbox is required for the S11 Smith Chart example.
 
 ### Supported models
 
@@ -50,7 +52,7 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *PicoVNA* is a trademark of Pico Technology Ltd. 
 
-*MATLAB* is a registered trademark of The Mathworks, Inc.
+*MATLAB* is a registered trademark of The Mathworks, Inc. *RF Toolbox* is a registered trademark of The Mathworks, Inc.
 
 *Windows* is a registered trademark of Microsoft Corporation. 
 
