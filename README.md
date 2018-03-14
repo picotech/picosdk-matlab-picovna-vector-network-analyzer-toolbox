@@ -10,12 +10,14 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 ### Prerequisites
 
 * [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows (32-bit)
-* PicoVNA 2 software (see [Installing software](#Installing software))
+* [RF Toolbox](https://uk.mathworks.com/products/rftoolbox.html)
+* PicoVNA 2 software (see [Installing software](#installing-software))
 
 **Notes:**
 
 * MATLAB 2015b is recommended for 32-bit versions of MATLAB on Microsoft Windows operating systems.
 * The interface to the PicoVNA Network Analyzers is not currently compatible with 64-bit versions of MATLAB. 
+* RF Toolbox is required for the S11 Smith Chart example.
 
 ### Supported models
 
@@ -25,7 +27,7 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 
 We recommend using the [Add-Ons Explorer](https://uk.mathworks.com/help/matlab/matlab_env/get-add-ons.html) in MATLAB in order to install these files and obtain updates.
 
-If your version of MATLAB does not have the Add-Ons Explorer, download the zip file from the [MATLAB Central File Exchange page]()
+If your version of MATLAB does not have the Add-Ons Explorer, download the zip file from the [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/66035-picovna-vector-network-analyzer-toolbox)
  and add the root and sub-folders to the MATLAB path.
  
 ### Installing software
@@ -38,7 +40,7 @@ Please visit our [Support page](https://www.picotech.com/tech-support) to contac
 
 Issues can be reported via the [Issues tab](https://github.com/picotech/picosdk-matlab-picovna-vector-network-analyzer-toolbox/issues).
 
-Please leave a comment and rating for this submission on our [MATLAB Central File Exchange page]().
+Please leave a comment and rating for this submission on our [MATLAB Central File Exchange page](https://uk.mathworks.com/matlabcentral/fileexchange/66035-picovna-vector-network-analyzer-toolbox).
 
 ## Code of conduct
 
@@ -50,8 +52,8 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *PicoVNA* is a trademark of Pico Technology Ltd. 
 
-*MATLAB* is a registered trademark of The Mathworks, Inc.
+*MATLAB* is a registered trademark of The Mathworks, Inc. *RF Toolbox* is a registered trademark of The Mathworks, Inc.
 
 *Windows* is a registered trademark of Microsoft Corporation. 
 
-Copyright Â© 2017-2018 Pico Technology Ltd. All rights reserved.
+Copyright © 2017-2018 Pico Technology Ltd. All rights reserved.

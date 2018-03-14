@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding="utf-8"?>
 <toc version="2.0">
     <tocitem target="picovna_tbx_gettingstarted.html"> Getting Started with PicoVNA Vector Network Analyzer
-        <tocitem target="picovna_tbx_support.html">Support</tocitem>
-        <tocitem target="picovna_tbx_troubleshooting.html">Troubleshooting</tocitem>
-        <tocitem target="picovna_tbx_releasenotes.html">Release Notes</tocitem>
         <tocitem target="picovna_tbx_functions.html">Functions</tocitem>
+        <tocitem target="picovna_tbx_releasenotes.html">Release Notes</tocitem>
+        <tocitem target="picovna_tbx_troubleshooting.html">Troubleshooting</tocitem>
+        <tocitem target="picovna_tbx_support.html">Support</tocitem>
     </tocitem>
 </toc>

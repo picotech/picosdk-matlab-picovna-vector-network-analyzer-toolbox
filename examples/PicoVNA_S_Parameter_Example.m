@@ -5,10 +5,11 @@
 % the log magnitude data for S11, S12, S21 and S22 parameters.
 %
 % To run this example session, type the name of the file,
-% |PicoVNA_S-Parameter_Example|, in the MATLAB Command Window.
+% |PicoVNA_S_Parameter_Example|, in the MATLAB Command Window.
 %
-% The file, |PicoVNA_S-Parameter_Example.m| must be on your MATLAB Path. For
-% additional information on setting your MATLAB path, see <matlab:doc('addpath') addpath>
+% The file, |PicoVNA_S_Parameter_Example.m| must be on your MATLAB Path. For
+% additional information on setting your MATLAB path, see
+% <matlab:doc('addpath') addpath>.
 %
 % Additionally you must have the |.cal| file for your device in the current
 % folder.
