@@ -1,6 +1,6 @@
 # PicoVNA Vector Network Analyzer Toolbox
 
-The PicoVNA Vector Network Analyzer Toolbox provides a set of functions and examples for use with Pico Technology PicoVNA<sup>TM</sup> Vector Network Analyzer products directly from MATLAB. 
+The PicoVNA Vector Network Analyzer Toolbox provides a set of functions and examples for use with Pico Technology PicoVNA<sup>®</sup> Vector Network Analyzer products directly from MATLAB. 
 This toolbox contains Help documentation that can be accessed via the Documentation page in the MATLAB Help menu.
 
 Users downloading the zip file will need to add the root folder and sub-folders to the MATLAB path.
@@ -48,12 +48,12 @@ Please refer to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
 
 ## Copyright and licensing
 
-See [LICENSE.md](LICENSE.md) for license terms. 
+See [LICENSE.md](LICENSE.md) for license terms.
 
-*PicoVNA* is a trademark of Pico Technology Ltd. 
+*PicoVNA* is a registered trademark of Pico Technology Ltd.
 
 *MATLAB* is a registered trademark of The Mathworks, Inc. *RF Toolbox* is a registered trademark of The Mathworks, Inc.
 
-*Windows* is a registered trademark of Microsoft Corporation. 
+*Windows* is a registered trademark of Microsoft Corporation.
 
-Copyright � 2017-2018 Pico Technology Ltd. All rights reserved.
+Copyright © 2017-2018 Pico Technology Ltd. All rights reserved.
