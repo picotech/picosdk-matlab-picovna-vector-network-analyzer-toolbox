@@ -1,0 +1,420 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>PicoVNA S-Parameter Example</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-23"><meta name="DC.source" content="PicoVNA_S-Parameter_Example.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>PicoVNA S-Parameter Example</h1><!--introduction--><p>This is an example of setting up the connection with the Pico Technology PicoVNA 106, loading calibration data, making measurements and collecting the log magnitude data for S11, S12, S21 and S22.</p><p>To run this example session, type the name of the file, PicoVNA_S-Parameter_Example, in the MATLAB Command Window.</p><p>The file, PicoVNA_S-Parameter_Example.m must be on your MATLAB Path. For additional information on setting your MATLAB path, type 'help addpath' in the MATLAB Command Window</p><p>Additionally you must have the .cal file for your device in the current folder.</p><p><b>Example:</b>   PicoVNA_S-Parameter_Example;</p><p><b>Description:</b> Demonstrates how to connect to the VNA, load in a calibration, make measurements and collect data for S11, S12, S21 and S22.  The S-aparamters are plotted onto auto-scaled plots.  The measurement and data collection is looped until the user stops the process.</p><p><b>Copyright:</b> &copy; 2017-2018 Pico Technology Ltd. See LICENSE file for terms.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Clear workspace, command window and close figures</a></li><li><a href="#2">Connect to VNA</a></li><li><a href="#3">Load Calibration</a></li><li><a href="#4">Stop button for exiting loop</a></li><li><a href="#5">Capture and plot data</a></li><li><a href="#6">Disconnect VNA</a></li></ul></div><h2>Clear workspace, command window and close figures<a name="1"></a></h2><pre class="codeinput">clear;
+clc;
+close <span class="string">all</span>;
+</pre><h2>Connect to VNA<a name="2"></a></h2><pre class="codeinput">picoVNACOMObj = connectVNA;
+</pre><h2>Load Calibration<a name="3"></a></h2><p>Load a calibration and settings file. This needs to be generated and saved using the PicoVNA2 software.</p><pre class="codeinput"><span class="comment">% Replace DefCal.cal with the correct calibration for your device, 'Pico TD</span>
+<span class="comment">% demo with limits [Serial#].cal'.</span>
+picoVNACOMObj.LoadCal(<span class="string">'DefCal.cal'</span>);
+</pre><h2>Stop button for exiting loop<a name="4"></a></h2><p>Create a stop button for exiting rapid block capture and for displaying the data in.</p><pre class="codeinput">[stopFig.f, stopFig.h] = stopButtonVNA(0, 50, 1350,1000);
+
+flag = 1; <span class="comment">% Use flag variable to indicate if stop button has been clicked (0)</span>
+setappdata(gcf, <span class="string">'run'</span>, flag);
+</pre><h2>Capture and plot data<a name="5"></a></h2><pre class="codeinput">n = 0; <span class="comment">% Number of Loops</span>
+go = 1; <span class="comment">% While loop condition (1 = run, 0 = stop)</span>
+
+<span class="keyword">while</span> go == 1
+
+    <span class="comment">% Instruct VNA do make a sweep measurement</span>
+    picoVNACOMObj.Measure(<span class="string">'ALL'</span>);
+
+    <span class="comment">% Get Log magnitude data for all S-Parameters</span>
+    [s11.freq, s11.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,<span class="string">'S11'</span>,<span class="string">'logmag'</span>);
+    [s22.freq, s22.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,<span class="string">'S22'</span>,<span class="string">'logmag'</span>);
+    [s12.freq, s12.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,<span class="string">'S12'</span>,<span class="string">'logmag'</span>);
+    [s21.freq, s21.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,<span class="string">'S21'</span>,<span class="string">'logmag'</span>);
+
+    <span class="comment">% Get values for y-axes limits</span>
+    maxS11c = max(s11.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        maxS11 = maxS11c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> maxS11c &gt; maxS11
+        maxS11 = maxS11c;
+    <span class="keyword">end</span>
+
+    minS11c = min(s11.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        minS11 = minS11c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> minS11c &lt; minS11
+        minS11 = minS11c;
+    <span class="keyword">end</span>
+
+    maxS22c = max(s22.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        maxS22 = maxS22c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> maxS22c &gt; maxS22
+        maxS22 = maxS22c;
+    <span class="keyword">end</span>
+
+    minS22c = min(s22.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        minS22 = minS22c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> minS22c &lt; minS22
+        minS22 = minS22c;
+    <span class="keyword">end</span>
+
+    maxS12c = max(s12.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        maxS12 = maxS12c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> maxS12c &gt; maxS12
+        maxS12 = maxS12c;
+    <span class="keyword">end</span>
+
+    minS12c = min(s12.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        minS12 = minS12c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> minS12c &lt; minS12
+        minS12 = minS12c;
+    <span class="keyword">end</span>
+
+    maxS21c = max(s21.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        maxS21 = maxS21c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> maxS21c &gt; maxS21
+        maxS21 = maxS21c;
+    <span class="keyword">end</span>
+
+    minS21c = min(s21.logmagDataPoints);
+
+    <span class="keyword">if</span> n == 0
+        minS21 = minS21c;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> minS21c &lt; minS21
+        minS21 = minS21c;
+    <span class="keyword">end</span>
+
+
+    <span class="comment">% Plot Data for all S-parameters</span>
+    subplot(2,2,1);
+    plot(s11.freq, s11.logmagDataPoints);
+    xlabel(<span class="string">'Frequency (Hz)'</span>);
+    ylabel(<span class="string">'Magnitude (dB)'</span>);
+    ylim([minS11 maxS11]);
+    title(<span class="string">'S11'</span>)
+
+    subplot(2,2,2);
+    plot(s12.freq, s12.logmagDataPoints);
+    xlabel(<span class="string">'Frequency (Hz)'</span>);
+    ylabel(<span class="string">'Magnitude (dB)'</span>);
+    ylim([minS12 maxS12]);
+    title(<span class="string">'S12'</span>);
+
+    subplot(2,2,3);
+    plot(s21.freq, s21.logmagDataPoints);
+    xlabel(<span class="string">'Frequency (Hz)'</span>);
+    ylabel(<span class="string">'Magnitude (dB)'</span>);
+    ylim([minS21 maxS21]);
+    title(<span class="string">'S21'</span>);
+
+    subplot(2,2,4);
+    plot(s22.freq, s22.logmagDataPoints);
+    xlabel(<span class="string">'Frequency (Hz)'</span>);
+    ylabel(<span class="string">'Magnitude (dB)'</span>);
+    ylim([minS22 maxS22]);
+    title(<span class="string">'S22'</span>);
+
+    drawnow
+
+    n = n+1 <span class="comment">% Current Loop Number</span>
+
+    <span class="comment">% Check if stop button has been pressed</span>
+    flag = getappdata(gcf, <span class="string">'run'</span>);
+    <span class="keyword">if</span> flag == 0
+        go = 0;
+    <span class="keyword">end</span>
+    clear <span class="string">maxS11c</span> <span class="string">minS11c</span> <span class="string">maxS12c</span> <span class="string">minS12c</span> <span class="string">maxS21c</span> <span class="string">minS21c</span> <span class="string">maxS22c</span> <span class="string">minS22c</span>
+<span class="keyword">end</span>
+</pre><h2>Disconnect VNA<a name="6"></a></h2><pre class="codeinput">disconnectVNA(picoVNACOMObj)
+
+<span class="comment">% Tidy workspace</span>
+clear <span class="string">ans</span> <span class="string">flag</span> <span class="string">go</span> <span class="string">maxS11</span> <span class="string">minS11</span> <span class="string">maxS12</span> <span class="string">minS12</span> <span class="string">maxS21</span> <span class="string">minS21</span> <span class="string">maxS22</span> <span class="string">minS22</span> <span class="string">picoVNACOMObj</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% PicoVNA S-Parameter Example
+%
+% This is an example of setting up the connection with the Pico Technology
+% PicoVNA 106, loading calibration data, making measurements and collecting
+% the log magnitude data for S11, S12, S21 and S22.
+%
+% To run this example session, type the name of the file,
+% PicoVNA_S-Parameter_Example, in the MATLAB Command Window.
+%
+% The file, PicoVNA_S-Parameter_Example.m must be on your MATLAB Path. For
+% additional information on setting your MATLAB path, type 'help addpath' in
+% the MATLAB Command Window
+%
+% Additionally you must have the .cal file for your device in the current
+% folder.
+%
+% *Example:*
+%   PicoVNA_S-Parameter_Example;
+%
+% *Description:*
+% Demonstrates how to connect to the VNA, load in a calibration, make
+% measurements and collect data for S11, S12, S21 and S22.  The
+% S-aparamters are plotted onto auto-scaled plots.  The measurement and
+% data collection is looped until the user stops the process.
+%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
+
+%% Clear workspace, command window and close figures
+
+clear;
+clc;
+close all;
+
+%% Connect to VNA
+
+picoVNACOMObj = connectVNA;
+
+%% Load Calibration
+% Load a calibration and settings file.
+% This needs to be generated and saved using the PicoVNA2 software.
+
+% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
+% demo with limits [Serial#].cal'.
+picoVNACOMObj.LoadCal('DefCal.cal');
+
+%% Stop button for exiting loop
+% Create a stop button for exiting rapid block capture and for displaying
+% the data in.
+[stopFig.f, stopFig.h] = stopButtonVNA(0, 50, 1350,1000);   
+
+flag = 1; % Use flag variable to indicate if stop button has been clicked (0)
+setappdata(gcf, 'run', flag);
+
+%% Capture and plot data
+
+n = 0; % Number of Loops
+go = 1; % While loop condition (1 = run, 0 = stop)
+
+while go == 1
+    
+    % Instruct VNA do make a sweep measurement
+    picoVNACOMObj.Measure('ALL');
+    
+    % Get Log magnitude data for all S-Parameters 
+    [s11.freq, s11.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,'S11','logmag');
+    [s22.freq, s22.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,'S22','logmag'); 
+    [s12.freq, s12.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,'S12','logmag');
+    [s21.freq, s21.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,'S21','logmag');
+    
+    % Get values for y-axes limits
+    maxS11c = max(s11.logmagDataPoints);
+    
+    if n == 0
+        maxS11 = maxS11c;
+    end
+    
+    if maxS11c > maxS11
+        maxS11 = maxS11c;
+    end
+    
+    minS11c = min(s11.logmagDataPoints);
+    
+    if n == 0
+        minS11 = minS11c;
+    end
+    
+    if minS11c < minS11
+        minS11 = minS11c;
+    end
+    
+    maxS22c = max(s22.logmagDataPoints);
+    
+    if n == 0
+        maxS22 = maxS22c;
+    end
+    
+    if maxS22c > maxS22
+        maxS22 = maxS22c;
+    end
+    
+    minS22c = min(s22.logmagDataPoints);
+    
+    if n == 0
+        minS22 = minS22c;
+    end
+    
+    if minS22c < minS22
+        minS22 = minS22c;
+    end
+    
+    maxS12c = max(s12.logmagDataPoints);
+    
+    if n == 0
+        maxS12 = maxS12c;
+    end
+    
+    if maxS12c > maxS12
+        maxS12 = maxS12c;
+    end
+    
+    minS12c = min(s12.logmagDataPoints);
+    
+    if n == 0
+        minS12 = minS12c;
+    end
+    
+    if minS12c < minS12
+        minS12 = minS12c;
+    end
+    
+    maxS21c = max(s21.logmagDataPoints);
+    
+    if n == 0
+        maxS21 = maxS21c;
+    end
+    
+    if maxS21c > maxS21
+        maxS21 = maxS21c;
+    end
+    
+    minS21c = min(s21.logmagDataPoints);
+    
+    if n == 0
+        minS21 = minS21c;
+    end
+    
+    if minS21c < minS21
+        minS21 = minS21c;
+    end
+    
+    
+    % Plot Data for all S-parameters
+    subplot(2,2,1);
+    plot(s11.freq, s11.logmagDataPoints);
+    xlabel('Frequency (Hz)');
+    ylabel('Magnitude (dB)');
+    ylim([minS11 maxS11]);
+    title('S11')
+    
+    subplot(2,2,2);
+    plot(s12.freq, s12.logmagDataPoints);
+    xlabel('Frequency (Hz)');
+    ylabel('Magnitude (dB)');
+    ylim([minS12 maxS12]);
+    title('S12');
+    
+    subplot(2,2,3);
+    plot(s21.freq, s21.logmagDataPoints);
+    xlabel('Frequency (Hz)');
+    ylabel('Magnitude (dB)');
+    ylim([minS21 maxS21]);
+    title('S21');
+    
+    subplot(2,2,4);
+    plot(s22.freq, s22.logmagDataPoints);
+    xlabel('Frequency (Hz)');
+    ylabel('Magnitude (dB)');
+    ylim([minS22 maxS22]);
+    title('S22');
+    
+    drawnow
+    
+    n = n+1 % Current Loop Number
+       
+    % Check if stop button has been pressed
+    flag = getappdata(gcf, 'run');
+    if flag == 0
+        go = 0;
+    end
+    clear maxS11c minS11c maxS12c minS12c maxS21c minS21c maxS22c minS22c
+end
+%% Disconnect VNA
+
+disconnectVNA(picoVNACOMObj)
+
+% Tidy workspace
+clear ans flag go maxS11 minS11 maxS12 minS12 maxS21 minS21 maxS22 minS22 picoVNACOMObj
+##### SOURCE END #####
+--></body></html>

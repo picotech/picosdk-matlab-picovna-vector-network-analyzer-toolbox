@@ -1,7 +1,7 @@
-%% ConnectVNA_SN
+%% ConnectVNA_SN_2
 %
 %% Description
-% CONNECTVNA_SN Creates PicoVNA COM object.
+% CONNECTVNA_SN_2 Creates PicoVNA COM object.
 %
 %   connectVNA() returns a COM object to a PicoVNA device.
 %
@@ -9,12 +9,12 @@
 %
 % See also DISCONNECTVNA.
 
-function [obj] = connectVNA()
+function [obj] = connectVNA_SN_2(serialNumber)
     % Create VNA COM object.
-    obj = actxserver('PicoControl2.PicoVNA_2');
+    obj = actxserver('PicoControl2_2.PicoVNA_2_2');
 
     % Check for an available VNA. 
-    findPicoVNA = obj.FND();
+    findPicoVNA = obj.FNDSN(serialNumber);
     
     if (findPicoVNA==0)
         error('ConnectVNA:VNANotFound', 'No PicoVNA device found.');

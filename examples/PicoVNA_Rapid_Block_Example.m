@@ -40,7 +40,10 @@ picoVNACOMObj = connectVNA;
 
 % Replace DefCal.cal with the correct calibration for your device, 'Pico TD
 % demo with limits [Serial#].cal'.
-picoVNACOMObj.LoadCal('DefCal.cal');
+picoVNACOMObj.LoadCal('?');
+
+%%
+ans1 = picoVNACOMObj.SetEnhance('BW', 140000);
 
 %% Stop button for exiting loop
 % Create a stop button for exiting rapid block capture and for displaying
