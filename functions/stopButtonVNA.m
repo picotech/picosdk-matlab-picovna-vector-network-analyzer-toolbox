@@ -1,29 +1,27 @@
-%% StopButtonVNA
+%% stopButtonVNA
 %
 %% Description
 %
-% STOPBUTTONVNA  Displays a stop button.
-%
-%   [F, H] = STOPBUTTON(X, Y, H, W) displays a Stop button to check abort of data collection - 
-%   based on MathWorks solution 1-15JIQ (http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine) and MATLAB Central Forum.
+% |[f, h] = stopButton(x, y, h, w)| displays a Stop button to check abort of data collection - 
+% based on <http://uk.mathworks.com/matlabcentral/answers/100558-how-do-i-set-up-a-uicontrol-callback-to-interrupt-a-routine MathWorks solution 1-15JIQ> and <https://uk.mathworks.com/matlabcentral/amswers/index MATLAB Central Answers>.
 %   
-%% Input arguments:
+% *Input arguments:*
 %
-%   X - See left in Location and Size for FIGURE
-%   Y - See bottom in Location and Size for FIGURE
-%   W - See width in Location and Size for FIGURE
-%   H - See height in Location and Size for FIGURE
+% * |x| - See |left| in Location and Size for figure
+% * |y| - See |bottom| in Location and Size for figure
+% * |w| - See |width| in Location and Size for figure
+% * |h| - See |height| in Location and Size for figure
 %
-%% Output arguments:
+% *Output arguments:*
 %
-%   F - the handle to the button's figure 
-%   H - the uicontrol object.
+% * |f| - the handle to the button's figure 
+% * |h| - the |uicontrol| object.
 %
-%   Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
-%
-%   See also FIGURE, UICONTROL.
+% See also <matlab:doc('figure') figure> | <matlab:doc('uicontrol') uicontrol> .
+
 
 function [f, h] = stopButton(x, y, w, h)
+
     % Check for valid inputs
     validateattributes(x,{'numeric'},{'nonnegative'});
     validateattributes(y,{'numeric'},{'nonnegative'});
@@ -40,3 +38,5 @@ function [f, h] = stopButton(x, y, w, h)
 
 end
 
+%%
+% *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.

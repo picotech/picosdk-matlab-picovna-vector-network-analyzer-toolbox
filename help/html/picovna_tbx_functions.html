@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>ConnectVNA</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-04"><meta name="DC.source" content="connectVNA.m"><style type="text/css">
+      --><title>Functions</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-02-09"><meta name="DC.source" content="picovna_tbx_functions.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,43 +66,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>ConnectVNA</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Description</a></li></ul></div><h2 id="1">Description</h2><p>CONNECTVNA Creates PicoVNA COM object.</p><pre class="language-matlab">connectVNA() returns <span class="string">a</span> <span class="string">COM</span> <span class="string">object</span> <span class="string">to</span> <span class="string">a</span> <span class="string">PicoVNA</span> <span class="string">device.</span>
-</pre><p>Copyright: &copy; 2017-2018 Pico Technology Ltd. All rights reserved.</p><p>See also DISCONNECTVNA.</p><pre class="codeinput"><span class="keyword">function</span> [obj] = connectVNA()
-    <span class="comment">% Create VNA COM object.</span>
-    obj = actxserver(<span class="string">'PicoControl2.PicoVNA_2'</span>);
-
-    <span class="comment">% Check for an available VNA.</span>
-    findPicoVNA = obj.FND;
-
-    <span class="keyword">if</span> (findPicoVNA==0)
-        error(<span class="string">'ConnectVNA:VNANotFound'</span>, <span class="string">'No PicoVNA device found.'</span>);
-    <span class="keyword">end</span>
-
-<span class="keyword">end</span>
-</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Functions</h1><div><ul><li><a href="picovna_tbx_connectVNA.html">connectVNA</a>: creates and returns a COM object to a PicoVNA device</li><li><a href="picovna_tbx_disconnectVNA.html">disconnectVNA</a>: closes the connection to the VNA and deletes the COM Object from the workspace</li><li><a href="picovna_tbx_getBlockDataVNA.html">getBlockDataVNA</a>: returns frequency and data points from a measurement sweep performed by a PicoVNA on a DUT</li><li><a href="picovna_tbx_stopButtonVNA.html">stopButtonVNA</a>: displays a Stop button to check abort of data collection</li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% ConnectVNA
+%% Functions
 %
-%% Description
-% CONNECTVNA Creates PicoVNA COM object.
-%
-%   connectVNA() returns a COM object to a PicoVNA device.
-%
-% Copyright: © 2017-2018 Pico Technology Ltd. All rights reserved.
-%
-% See also DISCONNECTVNA.
-
-function [obj] = connectVNA()
-    % Create VNA COM object.
-    obj = actxserver('PicoControl2.PicoVNA_2');
-
-    % Check for an available VNA. 
-    findPicoVNA = obj.FND;
-    
-    if (findPicoVNA==0)
-        error('ConnectVNA:VNANotFound', 'No PicoVNA device found.');
-    end
-
-end
+% * <picovna_tbx_connectVNA.html connectVNA>: creates and returns a COM object to a
+% PicoVNA device
+% * <picovna_tbx_disconnectVNA.html disconnectVNA>: closes the connection to the VNA and deletes the COM
+% Object from the workspace
+% * <picovna_tbx_getBlockDataVNA.html getBlockDataVNA>: returns frequency and data points
+% from a measurement sweep performed by a PicoVNA on a DUT
+% * <picovna_tbx_stopButtonVNA.html stopButtonVNA>: displays a Stop button to check abort of data collection
 ##### SOURCE END #####
 --></body></html>

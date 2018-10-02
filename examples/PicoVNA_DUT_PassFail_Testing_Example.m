@@ -2,17 +2,17 @@
 %
 % This is an example of a Pass/Fail test using the PicoVNA. This compares a
 % S21 log magnitude sweep from a device to the same measurement of a
-% prevously measured Golden DUT using the PicoVNA_GoldenDUT_Example.m file.
+% previously measured Golden DUT using the |PicoVNA_GoldenDUT_Example.m| file.
 %
 % To run this example session, type the name of the file,
-% PicoVNA_DUT_PassFail_Testing_Example, in the MATLAB Command Window.
+% |PicoVNA_DUT_PassFail_Testing_Example|, in the MATLAB Command Window.
 %
-% The file, PicoVNA_DUT_PassFail_Testing_Example.m must be on your MATLAB
-% Path. For additional information on setting your MATLAB path, type 'help
-% addpath' in the MATLAB Command Window
+% The file, |PicoVNA_DUT_PassFail_Testing_Example.m| must be on your MATLAB
+% Path. For additional information on setting your MATLAB path, see
+% <matlab:doc('addpath') addpath>.
 %
-% Additionally you must have the .cal file for your device and the
-% GoldenDUT.mat file in the current folder.
+% Additionally you must have the |.cal| file for your device and the
+% |GoldenDUT.mat| file in the current folder.
 %
 % *Example:*
 %   PicoVNA_DUT_PassFail_Testing_Example;
@@ -37,21 +37,21 @@ picoVNACOMObj = connectVNA;
 %% Load calibration
 % Load a calibration and settings file.
 % This needs to be generated and saved using the PicoVNA2 software.
-
-% Replace DefCal.cal with the correct calibration for your device, 'Pico TD
-% demo with limits [Serial#].cal'.
+%
+% Replace |DefCal.cal| with the correct calibration for your device, |Pico TD
+% demo with limits [Serial#].cal|.
 
 picoVNACOMObj.LoadCal('DefCal.cal');
 
 %% Load Golden DUT log magnitude
 % Load in the reference data from the Golden Dut captured using
-% PicoVNA_GoldenDUT_Example.m
+% <PicoVNA_GoldenDUT_Example.html |PicoVNA_GoldenDUT_Example|>
 
 load('GoldenDUT.mat');
 
 %% Create pass band
 % Create a pass band using the Golden DUT data and the tolererance in dB of
-% the testing for comparision with the DUTs later.
+% the testing for comparison with the DUTs later.
 
 tolerance = 0.2; % Tolerance of the cable in dB
 

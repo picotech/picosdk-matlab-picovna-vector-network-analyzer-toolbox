@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <demos>
-    <name>PicoVNA 106 Vector Network Analyser Toolbox</name>
+    <name>PicoVNA Vector Network Analyzer Toolbox</name>
     <type>toolbox</type>
     <icon>HelpIcon.DEMOS</icon>
-    <description>This toolbox contains a number of examples demonstrating how to call Instrument Driver functions to collect data and also a basic DUT pass/fail test.</description>
+    <description>This toolbox contains a number of examples demonstrating how to call functions to collect data and also a basic DUT pass/fail test.</description>
     <website></website>
     
     <demosection>
-        <label>PcioVNA 106</label>
+        <label>PicoVNA </label>
         <demoitem>
-            <label>PicoVNA 106 Rapid Block Example</label>
+            <label>PicoVNA S-Parameter Example</label>
             <type>M-file</type>
-            <source>PicoVNA_Rapid_Block_Example</source>
+            <source>PicoVNA_S-Parameter_Example</source>
         </demoitem>
         <demoitem>
-            <label>PicoVNA 106 S11 Smith Chart Example</label>
+            <label>PicoVNA S11 Smith Chart Example</label>
             <type>M-file</type>
             <source>PicoVNA_S11_Smith_Chart_Example</source>
         </demoitem>
         <demoitem>
-            <label>PicoVNA 106 Golden DUT Example</label>
+            <label>PicoVNA Golden DUT Example</label>
             <type>M-file</type>
             <source>PicoVNA_GoldenDUT_Example</source>
         </demoitem>
         <demoitem>
-            <label>PicoVNA 106 DUT Pass/Fail Testing Example</label>
+            <label>PicoVNA DUT Pass/Fail Testing Example</label>
             <type>M-file</type>
             <source>PicoVNA_DUT_PassFail_Testing_Example</source>
         </demoitem>
