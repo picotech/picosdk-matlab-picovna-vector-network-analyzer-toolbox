@@ -37,7 +37,6 @@ picoVNACOMObj = connectVNA;
 
 %% Load Calibration
 % Load a calibration and settings file.
-<<<<<<< HEAD:examples/PicoVNA_Rapid_Block_Example.m
 % This needs to be generated and saved using the PicoVNA2 software.
 
 % Replace DefCal.cal with the correct calibration for your device, 'Pico TD
@@ -45,14 +44,11 @@ picoVNACOMObj = connectVNA;
 picoVNACOMObj.LoadCal('?');
 
 %%
-ans1 = picoVNACOMObj.SetEnhance('BW', 140000);
-=======
 % This needs to be generated and saved using the PicoVNA 2 software.
 %
 % Replace |DefCal.cal| with the correct calibration for your device, |Pico TD
 % demo with limits [Serial#].cal|.
 picoVNACOMObj.LoadCal('DefCal.cal');
->>>>>>> 2cfc4b692078fea93da97288c75f6be6cdb49fa4:examples/PicoVNA_S_Parameter_Example.m
 
 %% Stop button for exiting loop
 % Create a stop button for exiting rapid block capture and for displaying

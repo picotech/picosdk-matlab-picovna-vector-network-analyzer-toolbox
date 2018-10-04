@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-%% ConnectVNA_SN
-%
-%% Description
-% CONNECTVNA_SN Creates PicoVNA COM object.
-=======
 %% connectVNA
 %
 %% Description
->>>>>>> 2cfc4b692078fea93da97288c75f6be6cdb49fa4
 %
 % |connectVNA()| creates and returns a COM object to a PicoVNA device.
 %

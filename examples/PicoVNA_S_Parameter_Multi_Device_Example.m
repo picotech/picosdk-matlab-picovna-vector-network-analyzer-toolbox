@@ -36,7 +36,6 @@ close all;
 
 picoVNACOMObj = connectVNA_SN('DC2LZ9IY');
 picoVNACOMObj_1 = connectVNA_SN_1('DC2L240G');
-%%
 picoVNACOMObj_2 = connectVNA_SN_2('DC2NXKID');
 
 %% Load Calibration
