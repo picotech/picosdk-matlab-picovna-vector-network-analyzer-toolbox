@@ -9,13 +9,12 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 
 ### Prerequisites
 
-* [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows (32- or 64-bit)
+* [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows
 * [RF Toolbox](https://uk.mathworks.com/products/rftoolbox.html)
 * PicoVNA 2 software (see [Installing software](#installing-software))
 
 **Notes:**
 
-* MATLAB 2015b is recommended for 32-bit versions of MATLAB on Microsoft Windows operating systems.
 * RF Toolbox is required for the S11 Smith Chart example.
 
 ### Supported models
