@@ -2,7 +2,7 @@
 %
 %% Description
 %
-% |connectVNA()| creates and returns a COM object to a PicoVNA device.
+% |connectVNA()| creates and returns a COM object to a PicoVNA106 device.
 %
 % *Output Arguments:*
 %

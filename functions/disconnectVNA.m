@@ -16,7 +16,7 @@
 function disconnectVNA(obj)
 
     % Check inputs are valid
-    validateattributes(obj,{'COM.PicoControl2_PicoVNA__2'},{});
+    validateattributes(obj,{'COM.PicoControl2_PicoVNA__2','COM.PicoControl3_PicoVNA__3'},{});
     
     % Close connection to PicoVNA.
     obj.CloseVNA();
@@ -26,4 +26,4 @@ function disconnectVNA(obj)
 
 end
 %%
-% *Copyright:* © 2017-2018 Pico Technology Ltd. All rights reserved.
+% *Copyright:* © 2017-2020 Pico Technology Ltd. All rights reserved.
