@@ -1,7 +1,7 @@
 %% PicoVNA S-Parameter Example
 %
 % This is an example of setting up the connection with the Pico Technology
-% PicoVNA Vector Newtwork Analyzer, loading calibration data, making measurements and collecting
+% PicoVNA Vector Network Analyzer, loading calibration data, making measurements and collecting
 % the log magnitude data for S11, S12, S21 and S22 parameters.
 %
 % To run this example session, type the name of the file,
@@ -23,7 +23,7 @@
 % S-parameters are plotted onto auto-scaled plots.  The measurement and
 % data collection is looped until the user stops the process.
 %
-% *Copyright:* © 2017-2018 Pico Technology Ltd. See LICENSE file for terms.
+% *Copyright:* © 2017-2020 Pico Technology Ltd. See LICENSE file for terms.
 
 %% Clear workspace, command window and close figures
 
@@ -66,7 +66,7 @@ go = 1; % While loop condition (1 = run, 0 = stop)
 while go == 1
     
     % Instruct VNA do make a sweep measurement
-    picoVNACOMObj.Measure('ALL');
+    picoVNACOMObj.Measure('Raw');
     
     % Get Log magnitude data for all S-Parameters 
     [s11.freq, s11.logmagDataPoints] = getBlockDataVNA(picoVNACOMObj,'S11','logmag');
