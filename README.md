@@ -11,7 +11,8 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 
 * [MATLAB](https://uk.mathworks.com/products/matlab.html) for Microsoft Windows
 * [RF Toolbox](https://uk.mathworks.com/products/rftoolbox.html)
-* PicoVNA 2 software (see [Installing software](#installing-software))
+* PicoVNA 2 software (see [Installing software](#installing-software)) for the PicoVNA 106
+* PicoVNA 3 software for the PicoVNA 108
 
 **Notes:**
 
@@ -20,6 +21,7 @@ Users downloading the zip file will need to add the root folder and sub-folders 
 ### Supported models
 
 * PicoVNA 106
+* PicoVNA 108
 
 ### Installing the PicoVNA Vector Network Analyzer Toolbox files
 
@@ -30,7 +32,7 @@ If your version of MATLAB does not have the Add-Ons Explorer, download the zip f
  
 ### Installing software
 
-* Download the PicoVNA 2 software from our [Downloads page](https://www.picotech.com/downloads).
+* Download the PicoVNA 2 and PicoVNA 3 software from our [Downloads page](https://www.picotech.com/downloads).
 
 ## Obtaining support
 
@@ -58,4 +60,4 @@ See [LICENSE.md](LICENSE.md) for license terms.
 
 *Windows* is a registered trademark of Microsoft Corporation.
 
-Copyright © 2017-2019 Pico Technology Ltd. All rights reserved.
+Copyright © 2017-2020 Pico Technology Ltd. All rights reserved.
